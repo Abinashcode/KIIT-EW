@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIIT Higher Secondary School</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header-nav">
+        <div class="container-fluid">
+            <div class="row align-items-center py-2">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="far fa-clock me-2"></i>
+                        <span id="datetime"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="header-links-right">
+                        <a href="index.html" class="header-link"><i class="fas fa-home"></i></a>
+                        <span class="separator">|</span>
+                        <a href="#about" class="header-link">KIIT Higher Secondary School</a>
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="#" class="header-link">Sitemap</a> -->
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="inquiry.html" class="btn btn-enquiry">Enquiry</a> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-navbar navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/KIIT_logo.png" alt="KIIT Higher Secondary School Logo" class="logo-img">
+                <div class="logo-text" >
+                    <h5  class="mb-0"><i>
+                        KIIT  ENTRANCE  WINGS
+                    </i></h5>
+                    <!-- <p class="mb-0">Bhubaneswar, Odisha</p> -->
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admission.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="facilities.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="achievements.html">Results</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                          <a class="nav-link" href="form.html">Admission Inquiry</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openForm()">Admission Inquiry</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Scrolling Images -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide">
+                <img src="./images/banner.jpg" alt="KIIT School Image 1" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-1"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="./images/banner.jpg" alt="KIIT School Image 2" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-2"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="./images/banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+            <!-- Duplicate slides for seamless loop -->
+            <div class="hero-slide">
+                <img src="./images/banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-1"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="./images/banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-2"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="./images/banner.jpg" alt="KIIT School Image 3" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <!-- First About Content - Image Left, Text Right with Orange Background -->
+        <div class="container-fluid px-50">
+            <div class="row align-items-center justify-content-between g-0 about-orange">
+                <div class="col-md-4">
+                    <img src="./images/guru-image.png" alt="Guru Shishya Parampara" class="">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="section-title mb-4 text-dark" id="typingHeading">KIIT ENTRANCE WINGS</h2>
+                    <p class=" about-text text-dark guru-text" style="font-family: cursive;">
+                       <b>
+                        Many students’ hanker to become doctors or engineers, first sparks in their early days of school. In India, these grail manifest a rich ambition in passing the very competitive (NEET/JEE) examinations, a life long success. A great success can be accomplished by doing well in the examination, which opens a mega entry to prominent medical colleges and engineering colleges, universities and IITs of the country and abroad. KIIT Higher Secondary School’s Entrance Wings is one of the distinguished organisation, which makes eternal your child’s aim visible. Technical coaching, well designed test series, intellectual environment, study material and versatile faculty members create the momentum between the students, which gives the breakthrough to the students towards pinnacle of success.
+                       </b>
+                    </p>
+                    <!-- <a href="#" class="read-more-link text-white">READ MORE</a> -->
+                </div>
+            </div>
+
+            <!-- Second About Content - Image Right, Text Left -->
+            <div class="row align-items-center g-0 about-mission">
+                <div class="col-md-6 order-md-2">
+                    <img src="./images/guru-2.png" alt="About KIIT" class="img-fluid about-mission-image">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="about-mission-content">
+                        <h2 class="section-title mb-4"></h2>
+                        <p class="about-text" style="font-family: cursive;">
+                           <b>
+                             This organisation completing its two decade existence believes in dedication and elegance, which give the determination to us as well as to our budding talents. Besides, we trust on high level education, so accomodated (IITians) to coin the concept with students, which they decode in examination and answer the questions managing integral times to their imagination. Heartily we invite all students join with us and enjoy the education and build your carrier adjacent to right choice, right time and right direction...!!
+                           </b>
+                        </p>
+                        <!-- <a href="#" class="read-more-link">READ MORE</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- APJ Abdul Kalam Motivation Message -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="kalam-message">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="quote-container-new">
+                                    <span class="quote-mark-new">"</span>
+                                    <p class="kalam-quote-new">
+Education brings creativity, thinking, and knowledge, leading to greatness. Excellence is a continuous process.
+                                    </p>
+                                </div>
+                                <div class="kalam-attribution text-end mt-3">
+                                    <p class="kalam-name-new mb-0" style="font-family: cursive; color: #002448; text-shadow: 1px 1px 2px gray;" >- Dr. APJ Abdul Kalam</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <img src="./images/dr-apj-kalam.jpg" alt="Dr. APJ Abdul Kalam" class="kalam-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty-section py-5">
+        <div class="container-fluid px-0">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Faculty</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center faculty-intro">
+                            Our dedicated team of experienced educators is committed to nurturing and inspiring our students.
+                        </p>
+                    </div>
+                </div>
+         
+            </div>
+           <div class="row">
+            <img src="./images/f-img1.jpg" alt="">
+          </div> 
+            <div class="row">
+            <img src="./images/f-img-2.jpg" alt="">
+          </div>
+            <div class="row">
+            <img src="./images/f-img-3.jpg" alt="">
+          </div>
+        </div>
+    </section>
+
+    <!-- Facilities Header -->
+    <div class="facilities-header">
+        <div class="container-fluid">
+            <div class="row g-0">
+                <div class="col-12 d-flex align-items-center px-4 py-4">
+                    <i class="fas fa-home me-3"></i>
+                    <h2 class="mb-0 facilities-header-title">FACILITIES</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facilities Section -->
+    <section class="facilities-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Expert Teachers -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="facility-title">Expert Teachers</h5>
+                        <p class="facility-description">Best & experienced faculty with proven track records</p>
+                    </div>
+                </div>
+
+                <!-- Academic Excellence -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="facility-title">Academic Excellence</h5>
+                        <p class="facility-description">Proven track record of outstanding results</p>
+                    </div>
+                </div>
+
+                <!-- Test & Assignment -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon yellow-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5 class="facility-title">Test & Assignment</h5>
+                        <p class="facility-description">Regular tests and assignments for continuous evaluation</p>
+                    </div>
+                </div>
+
+                <!-- Study Material -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h5 class="facility-title">Study Material</h5>
+                        <p class="facility-description">Well designed comprehensive study resources</p>
+                    </div>
+                </div>
+
+                <!-- Clear Guidance -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="facility-title">Clear Guidance</h5>
+                        <p class="facility-description">Individual guidance and personalized care</p>
+                    </div>
+                </div>
+
+                <!-- Library -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5 class="facility-title">Library</h5>
+                        <p class="facility-description">Well-stocked library with extensive resources</p>
+                    </div>
+                </div>
+
+                <!-- Lab -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h5 class="facility-title">Lab</h5>
+                        <p class="facility-description">State-of-the-art computer and science labs</p>
+                    </div>
+                </div>
+
+                <!-- Hygienic food -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon green-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5 class="facility-title">Hygienic food</h5>
+                        <p class="facility-description">food that is safe to eat and free from contaminants that can cause illness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="get-in-touch-section py-5">
+        <div class="container">
+            <h2 class="get-in-touch-title text-center mb-3">GET IN TOUCH</h2>
+            <p class="get-in-touch-subtitle text-center mb-5">
+                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            </p>
+            <div class="row g-4 justify-content-center">
+                <!-- Address Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="contact-title">Address</h5>
+                        <p class="contact-details">
+                            Campus- VII, KIIT, Patia<br>
+                            Bhubaneswar, Odisha
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5 class="contact-title">Phone</h5>
+                        <p class="contact-details">+91-73770-88233</p>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="contact-title">Email</h5>
+                        <p class="contact-details">kiitsciencecollege@yahoo.co.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2025 KIIT Higher Secondary School, Bhubaneswar, Odisha. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="typying-effect.js"></script>
+
+
+    <script>
+function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
+</script>
+
+
+    <div class="popup" id="popupForm">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closeForm()">×</span>
+
+        <h2>Admission Inquiry</h2>
+
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>E-mail</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Phone No</label>
+            <input type="tel" placeholder="Enter phone number">
+
+            <label>Subject</label>
+            <input type="text" placeholder="Enter subject">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+
