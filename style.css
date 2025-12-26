@@ -12,6 +12,9 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+
+
+
 .header-links {
     display: flex;
     align-items: center;
@@ -30,6 +33,8 @@
     text-decoration: none;
     padding: 5px 10px;
     transition: color 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .header-link:hover {
@@ -66,7 +71,7 @@
     top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
-    height: 70px;
+    height: 80px;
 }
 
 .navbar-brand {
@@ -82,17 +87,19 @@
     width: auto;
 }
 
-.logo-text h4 {
-    color: white;
+.logo-text h5 {
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .logo-text p {
     color: white;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     margin: 0;
+     font-family: "Brush Script MT", "Lucida Handwriting", "Comic Sans MS", cursive;
 }
+
 
 .navbar-nav .nav-link {
     color: white !important;
