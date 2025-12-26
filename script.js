@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         function nextSlide() {
             if (isTransitioning) return;
-            
+                             
             currentSlide++;
             
             // If we're at the duplicate of the first slide (slide 3), reset seamlessly

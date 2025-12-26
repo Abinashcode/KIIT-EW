@@ -467,118 +467,647 @@ section {
     border: 2px dashed rgba(255, 255, 255, 0.3);
 }
 
-/* Faculty Card Large */
-.faculty-card-large {
-    /* background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%); */
-    padding: 80px 100px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    position: relative;
+/* Faculty Card Wrapper */
+.faculty-card-wrapper {
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+/* Modern Faculty Card Base Styles */
+.faculty-card-top,
+.faculty-card-bottom,
+.faculty-card-single {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    min-height: 450px;
-    display: flex;
-    align-items: center;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 100%;
+    margin: 20px 0;
 }
 
-.faculty-card-full {
-    width: 100%;
+.faculty-card-top:hover,
+.faculty-card-bottom:hover,
+.faculty-card-single:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Faculty Card Top (Physics) */
+.faculty-card-top {
+    padding: 0;
+}
+
+.faculty-card-top .faculty-content-left {
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faculty-card-top .faculty-quote-green {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #155724;
     margin: 0;
+    padding: 60px 80px 50px 80px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background: white;
+    text-align: center;
+}
+
+.faculty-card-top .faculty-quote-green::before {
+    content: '❝';
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-top .faculty-quote-green::after {
+    content: '❞';
+    position: absolute;
+    right: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-top .faculty-description-box {
+    background: #001f3f;
+    padding: 45px 40px;
+    padding-bottom: 45px;
     border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.faculty-card-large:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+.faculty-card-top .faculty-description-text {
+    color: #f8f9fa;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.3px;
 }
 
-.faculty-card-large::before {
+/* Faculty Card Bottom (Chemistry) */
+.faculty-card-bottom {
+    padding: 0;
+}
+
+.faculty-card-bottom .faculty-content-right {
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faculty-card-bottom .faculty-quote-green {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #155724;
+    margin: 0;
+    padding: 60px 80px 50px 80px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background: white;
+    text-align: center;
+}
+
+.faculty-card-bottom .faculty-quote-green::before {
+    content: '❝';
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-bottom .faculty-quote-green::after {
+    content: '❞';
+    position: absolute;
+    right: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-bottom .faculty-description-box {
+    background: #001f3f;
+    padding: 45px 40px;
+    padding-bottom: 45px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.faculty-card-bottom .faculty-description-text {
+    color: #f8f9fa;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+/* Faculty Card Single (Biology) */
+.faculty-card-single {
+    padding: 0;
+}
+
+.faculty-card-single::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 8px;
-    background-color: white;
+    height: 6px;
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
     z-index: 1;
 }
 
-.faculty-card-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px 0;
+.faculty-card-single .faculty-content-left {
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.faculty-card-title-outline {
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    -webkit-text-stroke: 1.5px white;
-    -webkit-text-fill-color: transparent;
-    text-stroke: 1.5px white;
-    opacity: 0.9;
-}
-
-.faculty-card-name {
-    font-size: 2.8rem;
+.faculty-card-single .faculty-quote-green {
+    font-size: 2.2rem;
     font-weight: 700;
-    color: white;
-    margin-bottom: 25px;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
-}
-
-.faculty-card-description {
-    font-size: 1.2rem;
-    color: white;
-    line-height: 1.8;
-    opacity: 0.95;
+    color: #155724;
     margin: 0;
-    max-width: 600px;
-}
-
-.faculty-card-image-wrapper {
+    padding: 60px 80px 50px 80px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     position: relative;
+    background: white;
     text-align: center;
-    padding: 20px 0;
 }
 
-.faculty-card-image {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
+.faculty-card-single .faculty-quote-green::before {
+    content: '❝';
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-single .faculty-quote-green::after {
+    content: '❞';
+    position: absolute;
+    right: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-single .faculty-description-box {
+    background: #001f3f;
+    padding: 45px 40px;
+    padding-bottom: 45px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.faculty-card-single .faculty-description-text {
+    color: #f8f9fa;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+/* Faculty Image Wrapper */
+.faculty-image-wrapper {
     position: relative;
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.faculty-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: white;
+    z-index: 0;
+}
+
+.faculty-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: #001f3f;
+    z-index: 0;
+}
+
+.faculty-image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+    border: 3px dashed #cbd5e0;
+    background: #f7fafc;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.faculty-image-placeholder:hover {
+    border-color: #28a745;
+    background: #f0f9f4;
+}
+
+.faculty-image-placeholder i {
+    font-size: 4rem;
+    color: #a0aec0;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.faculty-image-placeholder:hover i {
+    color: #28a745;
+}
+
+.faculty-image-placeholder span {
+    font-size: 1.1rem;
+    color: #718096;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.faculty-image-placeholder:hover span {
+    color: #28a745;
+}
+
+/* Faculty Name Banner - Overlaid on Image */
+.faculty-name-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
     z-index: 2;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.faculty-subject {
+    background: #001f3f;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.faculty-name {
+    background: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+/* For Chemistry card, name comes first */
+.faculty-name-banner-chemistry {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.faculty-name-banner-chemistry .faculty-name {
+    background: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0;
+    flex: 1 1 auto;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.faculty-name-banner-chemistry .faculty-subject {
+    background: #001f3f;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 /* Responsive adjustments for faculty cards */
-@media (max-width: 768px) {
-    .faculty-card-large {
-        padding: 30px 20px;
+@media (max-width: 992px) {
+    .faculty-card-wrapper {
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+    
+    .faculty-card-top,
+    .faculty-card-bottom,
+    .faculty-card-single {
+        border-radius: 16px;
+        margin: 15px 0;
+    }
+    
+    .faculty-card-top .faculty-content-left,
+    .faculty-card-bottom .faculty-content-right,
+    .faculty-card-single .faculty-content-left {
+        padding: 40px 35px;
         min-height: auto;
     }
     
-    .faculty-card-title-outline {
-        font-size: 1.2rem;
+    .faculty-image-wrapper {
+        min-height: auto;
+        padding: 30px 25px;
     }
     
-    .faculty-card-name {
-        font-size: 1.8rem;
+    .faculty-quote-green {
+        font-size: 1.8rem !important;
+        padding: 50px 60px 40px 60px !important;
     }
     
-    .faculty-card-description {
+    .faculty-quote-green::before {
+        font-size: 4.5rem !important;
+        left: 35px !important;
+        top: 45px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 4.5rem !important;
+        right: 35px !important;
+        top: 45px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 35px 30px !important;
+        border-radius: 10px !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 1rem !important;
+        line-height: 1.8 !important;
+    }
+    
+    .faculty-image-placeholder {
+        max-width: 320px;
+        height: 380px;
+    }
+    
+    .faculty-image-placeholder i {
+        font-size: 3.5rem;
+    }
+    
+    .faculty-image-placeholder span {
         font-size: 1rem;
     }
     
-    .faculty-card-image {
-        max-width: 100%;
-        margin-top: 20px;
+    .faculty-subject {
+        font-size: 1.1rem !important;
+        padding: 14px 18px !important;
+    }
+    
+    .faculty-name {
+        font-size: 1.1rem !important;
+        padding: 14px 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .faculty-card-wrapper {
+        margin-bottom: 25px;
+        padding: 0 5px;
+    }
+    
+    .faculty-card-top,
+    .faculty-card-bottom,
+    .faculty-card-single {
+        border-radius: 14px;
+        margin: 12px 0;
+    }
+    
+    .faculty-card-top .faculty-content-left,
+    .faculty-card-bottom .faculty-content-right,
+    .faculty-card-single .faculty-content-left {
+        padding: 30px 25px;
+    }
+    
+    .faculty-quote-green {
+        font-size: 1.5rem !important;
+        margin-bottom: 25px !important;
+        padding: 40px 50px 30px 50px !important;
+    }
+    
+    .faculty-quote-green::before {
+        font-size: 4rem !important;
+        left: 25px !important;
+        top: 35px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 4rem !important;
+        right: 25px !important;
+        top: 35px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 30px 25px !important;
+        border-radius: 10px !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 0.95rem !important;
+        line-height: 1.75 !important;
+    }
+    
+    .faculty-image-wrapper {
+        padding: 25px 20px;
+    }
+    
+    .faculty-image-placeholder {
+        max-width: 280px;
+        height: 340px;
+    }
+    
+    .faculty-image-placeholder i {
+        font-size: 3rem;
+    }
+    
+    .faculty-image-placeholder span {
+        font-size: 0.95rem;
+    }
+    
+    .faculty-subject,
+    .faculty-name-banner-chemistry .faculty-subject {
+        font-size: 1rem !important;
+        padding: 12px 16px !important;
+    }
+    
+    .faculty-name,
+    .faculty-name-banner-chemistry .faculty-name {
+        font-size: 1rem !important;
+        padding: 12px 18px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .faculty-card-wrapper {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    .faculty-card-top,
+    .faculty-card-bottom,
+    .faculty-card-single {
+        border-radius: 12px;
+        margin: 10px 0;
+    }
+    
+    .faculty-card-top .faculty-content-left,
+    .faculty-card-bottom .faculty-content-right,
+    .faculty-card-single .faculty-content-left {
+        padding: 25px 20px;
+    }
+    
+    .faculty-quote-green {
+        font-size: 1.3rem !important;
+        margin-bottom: 20px !important;
+        padding: 35px 40px 25px 40px !important;
+    }
+    
+    .faculty-quote-green::before {
+        font-size: 3.5rem !important;
+        left: 20px !important;
+        top: 30px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 3.5rem !important;
+        right: 20px !important;
+        top: 30px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 25px 20px !important;
+        border-radius: 8px !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 0.9rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    .faculty-image-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .faculty-image-placeholder {
+        max-width: 240px;
+        height: 300px;
+    }
+    
+    .faculty-image-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    .faculty-image-placeholder span {
+        font-size: 0.9rem;
+    }
+    
+    .faculty-subject,
+    .faculty-name-banner-chemistry .faculty-subject {
+        font-size: 0.95rem !important;
+        padding: 10px 14px !important;
+    }
+    
+    .faculty-name,
+    .faculty-name-banner-chemistry .faculty-name {
+        font-size: 0.95rem !important;
+        padding: 10px 16px !important;
     }
 }
 
@@ -802,15 +1331,6 @@ section {
     .faculty-section {
         padding: 60px 0 !important;
     }
-    
-    .faculty-card-large {
-        padding: 50px 40px;
-        min-height: 350px;
-    }
-    
-    .faculty-card-name {
-        font-size: 2.2rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -851,24 +1371,6 @@ section {
     
     .faculty-section {
         padding: 50px 0 !important;
-    }
-    
-    .faculty-card-large {
-        padding: 40px 30px;
-        min-height: auto;
-    }
-    
-    .faculty-card-title-outline {
-        font-size: 1.3rem;
-        letter-spacing: 2px;
-    }
-    
-    .faculty-card-name {
-        font-size: 1.8rem;
-    }
-    
-    .faculty-card-description {
-        font-size: 1rem;
     }
     
     .facility-card {
@@ -919,14 +1421,6 @@ section {
     .about-orange,
     .about-mission-content {
         padding: 30px 20px;
-    }
-    
-    .faculty-card-large {
-        padding: 30px 20px;
-    }
-    
-    .faculty-card-name {
-        font-size: 1.5rem;
     }
     
     .kalam-message {
