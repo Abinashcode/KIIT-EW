@@ -604,6 +604,7 @@ section {
     align-items: flex-start;
     min-height: 0;
     height: 100%;
+    border-radius: 10px 25px 5px 5px;
 }
 
 .faculty-card-top .faculty-description-text {
@@ -873,7 +874,7 @@ section {
 /* Faculty Name Banner - Overlaid on Image */
 .faculty-name-banner {
     position: absolute;
-    bottom: 80px;
+    bottom: 13px;
     left: 0;
     right: 0;
     display: flex;
