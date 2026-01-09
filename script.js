@@ -35,13 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (heroSlider) {
         let currentSlide = 0;
-        const totalSlides = 3; // We have 3 unique slides
+        const totalSlides = 8; // We have 3 unique slides
         const slideInterval = 4000; // 4 seconds per slide
         let isTransitioning = false;
         
         function goToSlide(slideIndex) {
             // Calculate the position: each slide is 16.666% (100% / 6 slides)
             const position = slideIndex * 16.666;
+
             heroSlider.style.transform = `translateX(-${position}%)`;
         }
         

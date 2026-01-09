@@ -226,10 +226,22 @@ body {
     overflow-x: hidden;
 }
 
+/* Make all images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Ensure Bootstrap doesn't override our custom container styles */
 .container-fluid.px-0 {
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+/* Container with custom padding */
+.container-fluid.px-50 {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* Protect our custom row styles */
@@ -319,6 +331,7 @@ section {
     width: 100%;
     height: auto;
     object-fit: cover;
+    max-width: 100%;
 }
 
 .about-orange img:hover {
@@ -337,6 +350,7 @@ section {
     min-height: 500px;
     object-fit: cover;
     transition: transform 0.4s ease;
+    max-width: 100%;
 }
 
 .about-mission-image:hover {
@@ -616,13 +630,14 @@ section {
 
 .faculty-card-top .faculty-description-text {
     color: #f8f9fa;
-    font-size: 1.05rem;
+    font-size: 1.09rem;
     line-height: 1.9;
     margin: 0;
     padding: 0;
     text-align: justify;
     letter-spacing: 0.3px;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Faculty Card Bottom (Chemistry) */
@@ -820,12 +835,13 @@ section {
     object-fit: contain;
     object-position: center top;
     display: block;
-    margin: 15px auto 0;
+    /* margin: 15px auto 0; */
     /* padding: 0 20px; */
     /* border-radius: 0; */
     /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); */
     position: relative;
     z-index: 1;
+    top: 15%;
     /* transition: transform 0.3s ease; */
 }
 
@@ -962,6 +978,28 @@ section {
     border-radius: 0;
     box-shadow: none;
     text-shadow: none;
+}
+
+/* Responsive adjustments for container padding */
+@media (max-width: 992px) {
+    .container-fluid.px-50 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid.px-50 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid.px-50 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* Responsive adjustments for faculty cards */
@@ -1380,11 +1418,11 @@ section {
 }
 
 .facility-icon.blue-icon {
-    background-color: #195ca8;
+    background-color: #28a745;
 }
 
 .facility-icon.yellow-icon {
-    background-color: #FFA500;
+    background-color: #28a745;
 }
 
 .facility-icon.green-icon {
@@ -1518,31 +1556,212 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .about-orange {
+        padding: 70px 50px;
+    }
+    
+    .about-mission-content {
+        padding: 70px 50px;
+    }
+    
+    .kalam-message {
+        padding: 70px 50px;
+    }
+}
+
 @media (max-width: 992px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 13px;
+    }
+    
+    .header-link {
+        font-size: 15px;
+        padding: 5px 8px;
+    }
+    
+    /* Main Navbar */
+    .main-navbar {
+        height: auto;
+        padding: 12px 0;
+    }
+    
+    .logo-img {
+        height: 50px;
+    }
+    
+    .logo-text h5 {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text p {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 15px !important;
+        font-size: 0.95rem;
+    }
+    
+    /* About Section */
     .about-orange,
     .about-mission-content {
         padding: 60px 40px;
         background-color: #F7F7F7;
     }
     
+    .about-orange {
+        min-height: auto;
+    }
+    
+    .about-mission {
+        min-height: auto;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-text {
+        font-size: 1.1rem;
+    }
+    
+    /* Kalam Message */
+    .kalam-message {
+        padding: 60px 40px;
+        margin: 50px 0;
+    }
+    
+    .kalam-quote-new {
+        font-size: 1.6rem;
+    }
+    
+    .kalam-image {
+        max-width: 250px;
+    }
+    
+    /* Faculty Section */
     .faculty-section {
         padding: 60px 0 !important;
+    }
+    
+    /* Facilities */
+    .facilities-header-title {
+        font-size: 1.8rem;
+    }
+    
+    .facilities-section {
+        padding: 70px 0;
+    }
+    
+    .facility-card {
+        padding: 35px 25px;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-section {
+        padding: 80px 0;
+    }
+    
+    .get-in-touch-title {
+        font-size: 2.2rem;
+    }
+    
+    .contact-card {
+        padding: 45px 35px;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 500px;
+        clip-path: polygon(18% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: block;
+    }
+    
+    .f-text {
+        font-size: 17px;
+        margin-top: 80px;
+    }
+    
+    .icon {
+        margin-top: 80px;
+    }
+    
+    .girl-footer-container::after {
+        width: 500px;
     }
 }
 
 @media (max-width: 768px) {
-    .logo-text h4 {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+    
+    .header-nav .row {
+        text-align: center;
+    }
+    
+    .header-nav .col-md-6 {
+        margin-bottom: 5px;
+    }
+    
+    .header-links-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .header-link {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+    
+    .separator {
+        margin: 0 5px;
+    }
+    
+    #datetime {
+        font-size: 12px;
+    }
+    
+    /* Main Navbar */
+    .main-navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar-brand {
+        gap: 10px;
+    }
+    
+    .logo-img {
+        height: 45px;
+    }
+    
+    .logo-text h5 {
         font-size: 1rem;
     }
     
     .logo-text p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
+    .navbar-nav .nav-link {
+        padding: 8px 12px !important;
+        font-size: 0.9rem;
+        margin: 0 3px;
+    }
+    
+    /* Hero Section */
     .hero-section {
         height: 400px;
     }
     
+    /* About Section */
     .section-title {
         font-size: 1.8rem;
     }
@@ -1554,39 +1773,29 @@ section {
         background-color: white;
     }
     
+    .about-orange img {
+        margin-bottom: 20px;
+    }
+    
     .about-mission-image {
         min-height: 300px;
+        width: 100%;
+    }
+    
+    .about-orange img {
+        width: 100%;
+        max-width: 100%;
     }
     
     .about-text {
         font-size: 1rem;
-       
     }
-    .guru-text{
+    
+    .guru-text {
         font-family: cursive;
     }
     
-    .faculty-section {
-        padding: 50px 0 !important;
-    }
-    
-    .facility-card {
-        margin-bottom: 20px;
-    }
-    
-    .get-in-touch-section {
-        padding: 60px 0;
-    }
-    
-    .get-in-touch-title {
-        font-size: 2rem;
-    }
-    
-    .contact-card {
-        margin-bottom: 20px;
-        padding: 40px 30px;
-    }
-    
+    /* Kalam Message */
     .kalam-message {
         padding: 50px 30px;
         margin: 40px 0;
@@ -1605,23 +1814,205 @@ section {
         font-size: 1.4rem;
     }
     
+    .kalam-image {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+    
+    /* Faculty Section */
+    .faculty-section {
+        padding: 50px 0 !important;
+    }
+    
+    /* Facilities */
+    .facilities-header {
+        padding: 15px 0;
+    }
+    
+    .facilities-header-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .facilities-header i {
+        font-size: 1.3rem;
+    }
+    
     .facilities-section {
         padding: 60px 0;
+    }
+    
+    .facility-card {
+        margin-bottom: 20px;
+        padding: 35px 25px;
+    }
+    
+    .facility-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .facility-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-section {
+        padding: 60px 0;
+    }
+    
+    .get-in-touch-title {
+        font-size: 2rem;
+    }
+    
+    .get-in-touch-subtitle {
+        font-size: 1rem;
+    }
+    
+    .contact-card {
+        margin-bottom: 20px;
+        padding: 40px 30px;
+    }
+    
+    .contact-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 2.2rem;
+    }
+    
+    .contact-title {
+        font-size: 1.3rem;
+    }
+    
+    .contact-details {
+        font-size: 1rem;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 450px;
+        clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: block;
+    }
+    
+    .f-text {
+        font-size: 16px;
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .icon {
+        margin-top: 60px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .girl-footer-container::after {
+        width: 400px;
+    }
+    
+    /* Popup Form */
+    .popup-content {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px 20px;
     }
 }
 
 @media (max-width: 576px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 11px;
+        padding: 6px 0;
+    }
+    
+    .header-nav .row {
+        text-align: center;
+    }
+    
+    .header-nav .col-md-6 {
+        margin-bottom: 5px;
+    }
+    
+    .header-links-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .header-link {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+    
+    #datetime {
+        font-size: 11px;
+    }
+    
+    /* Main Navbar */
+    .main-navbar {
+        padding: 8px 0;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text h5 {
+        font-size: 0.9rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 6px 10px !important;
+        font-size: 0.85rem;
+    }
+    
+    /* Hero Section */
     .hero-section {
         height: 300px;
     }
     
+    /* About Section */
     .about-orange,
     .about-mission-content {
         padding: 30px 20px;
     }
     
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .about-orange img {
+        margin-bottom: 15px;
+    }
+    
+    .about-mission-image {
+        min-height: 250px;
+        width: 100%;
+    }
+    
+    .about-orange img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Kalam Message */
     .kalam-message {
         padding: 40px 20px;
+        margin: 30px 0;
     }
     
     .quote-container-new {
@@ -1630,10 +2021,284 @@ section {
     
     .quote-mark-new {
         font-size: 60px;
+        top: -5px;
     }
     
     .kalam-quote-new {
         font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .kalam-name-new {
+        font-size: 1rem;
+    }
+    
+    .kalam-image {
+        max-width: 180px;
+        margin-top: 15px;
+    }
+    
+    /* Facilities */
+    .facilities-header {
+        padding: 12px 0;
+    }
+    
+    .facilities-header-title {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .facilities-header i {
+        font-size: 1.2rem;
+    }
+    
+    .facilities-section {
+        padding: 50px 0;
+    }
+    
+    .facility-card {
+        padding: 30px 20px;
+    }
+    
+    .facility-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .facility-title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .facility-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-section {
+        padding: 50px 0;
+    }
+    
+    .get-in-touch-title {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+    
+    .get-in-touch-subtitle {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+    
+    .contact-card {
+        padding: 35px 25px;
+    }
+    
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-details {
+        font-size: 0.95rem;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 400px;
+        clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: none;
+    }
+    
+    .f-text {
+        font-size: 14px;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+    
+    .icon {
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .icon > div {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .girl-footer-container::after {
+        width: 300px;
+    }
+    
+    /* Popup Form */
+    .popup-content {
+        width: 95%;
+        max-width: 320px;
+        padding: 20px 15px;
+    }
+    
+    .close-btn {
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 0;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 10px;
+    }
+    
+    .header-link {
+        font-size: 11px;
+        padding: 2px 4px;
+    }
+    
+    /* Main Navbar */
+    .logo-img {
+        height: 35px;
+    }
+    
+    .logo-text h5 {
+        font-size: 0.8rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        height: 250px;
+    }
+    
+    /* About Section */
+    .about-orange,
+    .about-mission-content {
+        padding: 25px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+    }
+    
+    /* Kalam Message */
+    .kalam-message {
+        padding: 35px 15px;
+        margin: 25px 0;
+    }
+    
+    .quote-container-new {
+        padding-left: 35px;
+    }
+    
+    .quote-mark-new {
+        font-size: 50px;
+    }
+    
+    .kalam-quote-new {
+        font-size: 1.1rem;
+    }
+    
+    .kalam-image {
+        max-width: 150px;
+    }
+    
+    /* Facilities */
+    .facilities-header-title {
+        font-size: 1.1rem;
+    }
+    
+    .facility-card {
+        padding: 25px 15px;
+    }
+    
+    .facility-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .facility-title {
+        font-size: 1rem;
+    }
+    
+    .facility-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 30px 20px;
+    }
+    
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 350px;
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: none;
+    }
+    
+    .f-text {
+        font-size: 13px;
+        margin-top: 40px;
+        padding: 0 8px;
+    }
+    
+    .icon {
+        margin-top: 40px;
+        padding: 0 8px;
+    }
+    
+    .girl-footer-container::after {
+        width: 250px;
+    }
+    
+    /* Popup Form */
+    .popup-content {
+        width: 95%;
+        padding: 18px 12px;
     }
 }
 
@@ -1746,6 +2411,8 @@ button:hover {
 }
 
 
+/* ===================================               Footer Girl Section              ============================== */
+
 
 
 .g-t{
@@ -1774,9 +2441,208 @@ background-size: cover;
 z-index: -1;
 }
 
+/* Footer girl section responsive columns */
+@media (max-width: 768px) {
+    .girl-footer-container .col-3 {
+        flex: 0 0 auto;
+        width: 0;
+        display: none;
+    }
+    
+    .girl-footer-container .col-9 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    .girl-footer-container .col-10 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .girl-footer-container .col-3 {
+        display: none;
+    }
+    
+    .girl-footer-container .col-9 {
+        width: 100%;
+    }
+    
+    .girl-footer-container .col-10 {
+        width: 100%;
+    }
+}
+
 .f-text{
-    font-size: 22px;
+    font-size: 19px;
     text-align: justify;
     font-family: cursive;
     text-shadow: #ffffff;
+    margin-top: 100px;
 }
+.icon{
+ margin-top: 100px;
+}
+
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+/* ===================                   Chairmain section with outher 2 dropdown page style here               ================== */
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+
+
+.chairman-section {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 90px 5%;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.chairman-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 70px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.chairman-image img {
+    width: 1500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid rgba(255, 255, 255, 0.247);
+    box-shadow: #001f3f;
+}
+
+/* Content Styling */
+.chairman-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.chairman-content h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.chairman-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #eaeaea;
+}
+
+.chairman-sign {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #f1c40f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chairman-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chairman-image img {
+        width: 220px;
+        height: 280px;
+    }
+}
+
+
+
+
+/*  =================================               Drop down style here           ===========================*/
+
+/* Parent positioning */
+.dropdown-custom {
+    position: relative;
+}
+
+/* Submenu hidden by default */
+.dropdown-custom .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 999;
+}
+
+/* Show submenu on hover */
+.dropdown-custom:hover .submenu {
+    display: block;
+}
+
+/* Submenu links */
+.submenu a {
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.submenu a:hover {
+    background-color: #002b6c;
+    color: hsl(0, 0%, 100%);
+}
+
+/* Icon rotate on hover */
+.dropdown-custom:hover i {
+    transform: rotate(90deg);
+}
+
+.nav-link i {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+/* Responsive dropdown menu */
+@media (max-width: 991px) {
+    .dropdown-custom .submenu {
+        position: static;
+        display: block;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 5px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .dropdown-custom .submenu a {
+        padding: 8px 15px;
+        color: white;
+        border-left: 3px solid transparent;
+    }
+    
+    .dropdown-custom .submenu a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-left-color: white;
+        color: white;
+    }
+    
+    .dropdown-custom:hover .submenu {
+        display: block;
+    }
+}
+

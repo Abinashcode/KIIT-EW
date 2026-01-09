@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIIT Higher Secondary School</title>
+    <link rel="icon" type="image/x-icon" href="./images/KIIT_logo.png">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -64,9 +67,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="admission.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="facilities.html">About</a>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link" href="#">
+                            About <i class="fas fa-chevron-down"></i>
+                        </a>
+
+                        <div class="submenu">
+                            <a href="chairman-massage.html">Chairman Massage</a>
+                            <a href="principal-massage.html">Principal Massage</a>
+                            <a href="chief-advisor.html">Chief Advisor Massage</a>
+                        </div>
                     </li>
+
                     <li class="nav-item">
                       <a class="nav-link" href="achievements.html">Results</a>
                     </li>
@@ -92,15 +104,15 @@
     <section class="hero-section">
         <div class="hero-slider">
             <div class="hero-slide">
-                <img src="./images/banner.jpg" alt="KIIT School Image 1" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="./images/aurobinda-banner.jpg" alt="KIIT School Image 1" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="hero-placeholder hero-placeholder-1"></div>
             </div>
             <div class="hero-slide">
-                <img src="./images/banner.jpg" alt="KIIT School Image 2" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="./images/sarthak-banner.jpg" alt="KIIT School Image 2" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="hero-placeholder hero-placeholder-2"></div>
             </div>
             <div class="hero-slide">
-                <img src="./images/banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="./images/chinmay-banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="hero-placeholder hero-placeholder-3"></div>
             </div>
 
@@ -109,21 +121,33 @@
 
 
             <div class="hero-slide">
-                <img src="./images/banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="./images/somesh-banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="hero-placeholder hero-placeholder-1"></div>
             </div>
+
             <div class="hero-slide">
-                <img src="./images/banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="./images/maryada-banner.jpg" alt="KIIT School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="hero-placeholder hero-placeholder-2"></div>
             </div>
+
             <div class="hero-slide">
-                <img src="./images/banner.jpg" alt="KIIT School Image 3" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="./images/sarthak-banner.jpg" alt="KIIT School Image 3" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="hero-placeholder hero-placeholder-3"></div>
             </div>
+
+            <div class="hero-slide">
+                <img src="./images/madhusmita-banner.jpg" alt="KIIT School Image 3" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+
+
+            <div class="hero-slide">
+                <img src="./images/banner-subhalami.jpg" alt="KIIT School Image 3" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+
         </div>
     </section>
-
-
 
 
     <!-- About Section -->
@@ -245,7 +269,7 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
 
             <!-- Facciulty Member  section via code -->
             
-
+<!-- 1st Teacher -->
             <div class="row">
                 <div class="faculty-card-wrapper">
                     <div class="faculty-card-top">
@@ -265,7 +289,7 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
                                 </div>
                                 <div class="col-lg-5 col-md-12">
                                     <div class="faculty-image-wrapper">
-                                            <img src="./images/teacherrrrrrrrr.jpg" alt="" class="faculty-image">
+                                            <img src="./images/teacher/basudev-n.png" alt="" class="faculty-image">
                                             <div class="faculty-name-banner">
                                             <div class="faculty-subject">Physics</div>
                                             <div class="faculty-name">Mr. Basudev Pathi</div>
@@ -278,7 +302,7 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
                 </div>
             </div>
 
-            <!-- 2nd faculty member -->
+<!-- 2nd faculty member -->
             <div class="row">
                 <div class="faculty-card-wrapper">
                     <div class="faculty-card-top">
@@ -286,21 +310,21 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
                             <div class="row g-0 align-items-stretch">
                                 <div class="col-lg-5 col-md-12">
                                     <div class="faculty-image-wrapper">
-                                        <img src="./images/teacherrrrrrrrr.jpg" alt="" class="faculty-image">
+                                        <img src="./images/teacher/deepak-n.png" alt="" class="faculty-image">
                                         <div class="faculty-name-banner">
-                                            <div class="faculty-subject">Physics</div>
-                                            <div class="faculty-name">Mr. Basudev Pathi</div>
+                                            <div class="faculty-subject">Biology</div>
+                                            <div class="faculty-name">Deepak Panda</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-12">
                                     <div class="faculty-content-left">
                                         <div class="faculty-quote-green">
-                                            A Person without any aspiration is like a Boat without a rudder
+                                           ​"Success doesn't find you. You have to go Out and get it"
                                         </div>
                                         <div class="faculty-description-box">
                                             <p class="faculty-description-text">
-                                                To achieve our goal we have ambition, Ambition is a strong desire to achieve Something in life. Dedication, devotion, diligence and accumullation to the task, positive thinking with determination and counteracting dillemma have been the important factors of success of every theocratie person. After every think we all are the students.So learn, grow and architte the world,we should belive on: 'Momentum of talent coined the concept'
+                                                "Don't fear a change in the exam pattern or a difficult question paper. Evolution doesn't favor the strongest; it favors the most adaptable. Survival in the merit list belongs to those who can pivot their strategy under pressure."
                                             </p>
                                         </div>
                                     </div>
@@ -313,9 +337,7 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
     </section>
 
 
-
     <!-- 3rd Faculty Member -->
-
 
      <div class="row">
                 <div class="faculty-card-wrapper">
@@ -325,21 +347,21 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
                                 <div class="col-lg-7 col-md-12">
                                     <div class="faculty-content-left">
                                         <div class="faculty-quote-green">
-                                            A Person without any aspiration is like a Boat without a rudder
+                                            ​"Your routine is your result. Master the process, and the rank will follow."
                                         </div>
                                         <div class="faculty-description-box">
                                             <p class="faculty-description-text">
-                                                To achieve our goal we have ambition, Ambition is a strong desire to achieve Something in life. Dedication, devotion, diligence and accumullation to the task, positive thinking with determination and counteracting dillemma have been the important factors of success of every theocratie person. After every think we all are the students.So learn, grow and architte the world,we should belive on: 'Momentum of talent coined the concept'
+                                                    "Cracking entrance exams isn't about being a genius; it is about the consistency to show up every day and the resilience to learn from every mistake. Like a Rate Determining Step, your daily discipline is what ultimately controls the speed of your success."
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-12">
                                     <div class="faculty-image-wrapper">
-                                            <img src="./images/teacherrrrrrrrr.jpg" alt="" class="faculty-image">
+                                            <img src="./images/teacher/ananta-n.png" alt="" class="faculty-image">
                                             <div class="faculty-name-banner">
-                                            <div class="faculty-subject">Physics</div>
-                                            <div class="faculty-name">Mr. Basudev Pathi</div>
+                                            <div class="faculty-subject">Chemistry</div>
+                                            <div class="faculty-name">Mr. Ananth Ku Behera</div>
                                         </div>
                                     </div>
                                 </div>
@@ -351,6 +373,108 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
 
 
 
+<!-- 4th faculty member -->
+            <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-5 col-md-12">
+                                    <div class="faculty-image-wrapper">
+                                        <img src="./images/teacher/smurti-n.png" alt="" class="faculty-image">
+                                        <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Chemistry</div>
+                                            <div class="faculty-name">Mr. Smruti Ranjan Panda</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                           ​"The mind is everything. What you think, you become"
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                                NEET and JEE Chemistry often feels challenging, but with the right guidance it becomes logical and scoring. We focus on simplifying complex topics, strengthening NCERT fundamentals, and training students to think analytically so they can tackle even the toughest questions with ease.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+<!-- 5th Faculty Member -->
+
+     <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                            "Your potential is a function with no upper bound"
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                                "My ambition is tied to yours. When you succeed, I succeed. I’m here to break down the walls of 'intimidating' math and help you use it to reach your biggest goals. Let’s work hard, think fast, and bridge the gap between where you are and where you want to be."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12">
+                                    <div class="faculty-image-wrapper">
+                                            <img src="./images/teacher/tapas.png" alt="" class="faculty-image">
+                                            <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Math</div>
+                                            <div class="faculty-name">Mr.Tapas Ku Sahoo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- 6th faculty member -->
+            <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-5 col-md-12">
+                                    <div class="faculty-image-wrapper">
+                                        <img src="./images/teacher/jan-majaya-n-.png" alt="" class="faculty-image">
+                                        <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Physics</div>
+                                            <div class="faculty-name">Mr. Janmajay Meher</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                           "Curiosity is the thread. Physics is the map"
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                                "Physics is the thread that connects a child’s toy to the stars. It is the map we use to find our way through the universe"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 
 
 
@@ -520,20 +644,39 @@ Education brings creativity, thinking, and knowledge, leading to greatness. Exce
     </section>
 
     <br>
-<!-- girl section -->
+
+<!-- Footer girl section -->
 
 <section class="girl-footer-container">
     <div class="row">
         <div class="col-3 footer-photo">
             <!-- <img src="./images/footer-g-p.jpg" class="img-fluid" alt="Girl photo"> -->
         </div>
-        <div class="col-9 row g-t justify-content-end align-items-center">
-           <div class="f-text col-10">
-             <p>
+        <div class="col-9 row g-t justify-content-end align-items-start">
+           <div class="f-text col-10 ">
+             <p class="para">
                Believe in yourself and keep moving forward. Every small step you take today brings you closer to your goals. Don’t stop when things get hard—those moments are shaping you into something stronger. Stay focused, stay consistent, and trust the process. 🌱💪
 
                Challenges are not signs to stop; they are lessons to grow stronger and wiser. Stay patient, stay disciplined, and keep faith in your journey. Your hard work will pay off sooner than you think.
             </p>
+
+            <div class="icon d-flex justify-content-between">
+           <div class="phone d-flex flex-column align-items-center">
+             <i class="fa-solid fa-phone"></i>
+             <p>Ph No : 73770-88233</p>
+           </div>
+            <div class="mail d-flex flex-column align-items-center">
+                <i class="fa-regular fa-envelope"></i>
+                <p>G-mail : kiit@gmail.com</p>
+            </div>
+            <div class="location d-flex flex-column align-items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>
+                    Patia , Bhubaneswar , Odisha
+                </p>
+            </div>
+           </div>
+
            </div>
         </div>
     </div>
@@ -605,6 +748,10 @@ function closeForm() {
         </form>
     </div>
 </div>
+
+
+
+
 
 </body>
 </html>
