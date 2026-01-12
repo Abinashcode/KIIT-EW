@@ -271,6 +271,114 @@ section {
     position: relative;
 }
 
+
+/* Button-pdf */
+.btn-pdf{
+    /* display: flex; */
+    text-align: center;
+    margin: 10px 0;
+}
+.neon-btn {
+  position: relative;
+  display: inline-block;
+  padding: 18px 34px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.4s ease;
+  border-radius: 9px;
+  width: 50%;
+  text-align: center;
+  background-color: #001f3f;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Hover background */
+.neon-btn:hover {
+  background: #001f3f;
+  color: #ffffff;
+  box-shadow: 0 0 5px #001f3f,
+              0 0 20px #001f3f,
+              0 0 40px rgba(0, 31, 63, 0.6);
+}
+
+/* Animated borders */
+.neon-btn span {
+  position: absolute;
+  display: block;
+}
+
+/* Top border */
+.neon-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(180deg, transparent, #6aff00);
+  animation: animate1 1.2s linear infinite;
+}
+
+/* Right border */
+.neon-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #6aff00);
+  animation: animate2 1.2s linear infinite;
+  animation-delay: 0.3s;
+}
+
+/* Bottom border */
+.neon-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #6aff00);
+  animation: animate3 1.2s linear infinite;
+  animation-delay: 0.6s;
+}
+
+/* Left border */
+.neon-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #6aff00);
+  animation: animate4 1.9s linear infinite;
+  animation-delay: 0.9s;
+}
+
+/* Animations */
+@keyframes animate1 {
+  0% { left: -100%; }
+  50%,100% { left: 100%; }
+}
+
+@keyframes animate2 {
+  0% { top: -100%; }
+  50%,100% { top: 100%; }
+}
+
+@keyframes animate3 {
+  0% { right: -100%; }
+  50%,100% { right: 100%; }
+}
+
+@keyframes animate4 {
+  0% { bottom: -100%; }
+  50%,100% { bottom: 100%; }
+}
+
+
+
+
 /* About Section */
 .about-section {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
