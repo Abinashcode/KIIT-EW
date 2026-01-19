@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chier Advisor</title>
+    <link rel="icon" type="image/x-icon" href="./images/KIIT_logo.png">
+     <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+      <!-- Header Navigation -->
+
+    <header class="header-nav">
+        <div class="container-fluid">
+            <div class="row align-items-center py-2">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="far fa-clock me-2"></i>
+                        <span id="datetime"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="header-links-right">
+                        <a href="index.html" class="header-link"><i class="fas fa-home"></i></a>
+                        <span class="separator">|</span>
+                        <a href="https://www.kiitsciencecollege.org/" class="header-link">KIIT Higher Secondary School</a>
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="#" class="header-link">Sitemap</a> -->
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="inquiry.html" class="btn btn-enquiry">Enquiry</a> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main Navigation Bar -->
+
+
+    <nav class="main-navbar navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/KIIT_logo.png" alt="KIIT Higher Secondary School Logo" class="logo-img">
+                <div class="logo-text" >
+                    <h5  class="mb-0 "><i>
+                        KIIT  ENTRANCE  WINGS
+                    </i></h5>
+                    <p class="mb-0 logo-text">Momentum of Learning.....</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link" href="#">
+                            About <i class="fas fa-chevron-down"></i>
+                        </a>
+
+                        <div class="submenu">
+                            <a href="chairman-massage.html">Chairman Massage</a>
+                            <a href="principal-massage.html">Principal Massage</a>
+                            <a href="chief-advisor.html">Chief Advisor Massage</a>
+                            <a href="entrancecoordinator.html">Entrance Coordinator</a>
+                            <a href="viceprincipal.html">Vice Principal's Massage</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Results</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="#">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openForm()">Admission Inquiry</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chier Advisor massage section -->
+
+<section class="chairman-section">
+    <div class="chairman-container">
+
+        <!-- Chier Advisor Photo -->
+        <div class="chairman-image">
+            <img src="./images/uday-chief-adv.jpg" alt="Chairman Photo">
+        </div>
+
+        <!-- Chier Advisor Message -->
+        <div class="chairman-content">
+            <h2>Chier Advisor Message</h2>
+            <h4>Prof. Uday Sankar Acharya</h4>
+            <p>
+                    "It is a moment of deep satisfaction to see KIIT Entrance Wings, which began under my guidance, evolve into a fully operational and self-sufficient powerhouse of excellence.
+                     ​What differentiates us is that our system is not built on guesswork, but on strong, science-backed learning techniques. We integrated cognitive principles with rigorous mentorship to create a structure that guarantees performance.
+            </p>
+            <p>
+               The results—First Year, First AIIMS and our top NEET ranks—are not accidental. They are the calculated outcome of a scientifically designed academic ecosystem. I am proud to see the seeds we planted bloom into such glorious success."
+            </p>
+            <span class="chairman-sign">Chier Advisor</span>
+            <p class="j">KIIT Entrance Wings</p>
+        </div>
+
+    </div>
+</section>
+
+
+  <!-- Footer -->
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2025 KIIT Higher Secondary School, Bhubaneswar, Odisha. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- Bootstrap 5 JS Bundle -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="typying-effect.js"></script>
+
+
+
+
+
+<!--==================== Pop up Form Script  ======================== -->
+    <script>
+function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
+</script>
+
+
+
+<!--========================        Pop up Form HTML         ========================-->
+
+
+    <div class="popup" id="popupForm">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closeForm()">×</span>
+
+        <h2>Admission Inquiry</h2>
+
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>E-mail</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Phone No</label>
+            <input type="tel" placeholder="Enter phone number">
+
+            <label>Subject</label>
+            <input type="text" placeholder="Enter subject">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
