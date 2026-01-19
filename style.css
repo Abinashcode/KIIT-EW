@@ -1,0 +1,2866 @@
+/* 
+ * Bootstrap 5 Compatibility
+ * Custom styles override Bootstrap defaults to maintain design
+ * Bootstrap 5 CSS is loaded before this file
+ */
+
+/* Header Navigation Styles */
+
+/* body{
+    width: 100%;
+    overflow-x: hidden;
+} */
+
+.header-nav {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-links-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+}
+
+.header-link {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header-link:hover {
+    color: #195ca8;
+}
+
+.separator {
+    color: #e0e0e0;
+    margin: 0 8px;
+    font-weight: 300;
+}
+
+.btn-enquiry {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-enquiry:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* Main Navigation Bar */
+.main-navbar {
+    background-color: #001f3f;
+    padding: 15px 0;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 80px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: white !important;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.logo-text h5 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-text p {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+     font-family: "Brush Script MT", "Lucida Handwriting", "Comic Sans MS", cursive;
+}
+
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 10px 20px !important;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-slider {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+
+.hero-slide {
+    width: 16.666%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-placeholder-1 {
+    /* background: linear-gradient(135deg, #195ca8 0%, #667eea 100%); */
+    display: flex;
+}
+
+.hero-placeholder-2 {
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    display: flex;
+}
+
+.hero-placeholder-3 {
+    /* background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%); */
+    display: flex;
+}
+
+.hero-slide {
+    position: relative;
+}
+
+
+
+/* Global Styles */
+* {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Make all images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure Bootstrap doesn't override our custom container styles */
+.container-fluid.px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Container with custom padding */
+.container-fluid.px-50 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Protect our custom row styles */
+.row.g-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Section Spacing */
+section {
+    position: relative;
+}
+
+
+/* Button-pdf */
+.btn-pdf{
+    /* display: flex; */
+    text-align: center;
+    margin: 10px 0;
+}
+.neon-btn {
+  position: relative;
+  display: inline-block;
+  padding: 18px 34px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.4s ease;
+  border-radius: 9px;
+  width: 50%;
+  text-align: center;
+  background-color: #001f3f;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Hover background */
+.neon-btn:hover {
+  background: #001f3f;
+  color: #ffffff;
+  box-shadow: 0 0 5px #001f3f,
+              0 0 20px #001f3f,
+              0 0 40px rgba(0, 31, 63, 0.6);
+}
+
+/* Animated borders */
+.neon-btn span {
+  position: absolute;
+  display: block;
+}
+
+/* Top border */
+.neon-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(180deg, transparent, #6aff00);
+  animation: animate1 1.2s linear infinite;
+}
+
+/* Right border */
+.neon-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #6aff00);
+  animation: animate2 1.2s linear infinite;
+  animation-delay: 0.3s;
+}
+
+/* Bottom border */
+.neon-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #6aff00);
+  animation: animate3 1.2s linear infinite;
+  animation-delay: 0.6s;
+}
+
+/* Left border */
+.neon-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #6aff00);
+  animation: animate4 1.9s linear infinite;
+  animation-delay: 0.9s;
+}
+
+/* Animations */
+@keyframes animate1 {
+  0% { left: -100%; }
+  50%,100% { left: 100%; }
+}
+
+@keyframes animate2 {
+  0% { top: -100%; }
+  50%,100% { top: 100%; }
+}
+
+@keyframes animate3 {
+  0% { right: -100%; }
+  50%,100% { right: 100%; }
+}
+
+@keyframes animate4 {
+  0% { bottom: -100%; }
+  50%,100% { bottom: 100%; }
+}
+
+
+
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 0;
+}
+
+/* First About Content with Orange Background */
+.about-orange {
+    /* background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%); */
+    padding: 80px 60px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.about-orange::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.about-orange .section-title,
+.about-orange .about-text {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.about-orange .read-more-link {
+    color: white;
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.about-orange .read-more-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+    transform: translateX(5px);
+}
+
+.about-orange img {
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.about-orange img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.about-mission {
+    background-color: #F7F7F7;
+    min-height: 500px;
+}
+
+.about-mission-image {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    max-width: 100%;
+}
+
+.about-mission-image:hover {
+    transform: scale(1.02);
+}
+
+.about-mission-content {
+    padding: 80px 60px;
+}
+
+.section-title {
+    color: #195ca8;
+    font-weight: 700;
+    font-size: 2.0rem;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    color: #333;
+    line-height: 1.9;
+    font-size: 1.15rem;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.read-more-link {
+    color: #195ca8;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more-link:hover {
+    color: #ff6b35;
+    transform: translateX(5px);
+}
+
+/* Kalam Message Section */
+.kalam-message {
+    background: white;
+    padding: 80px 60px;
+    border-radius: 15px;
+    margin: 60px 0;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kalam-message:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.quote-container-new {
+    position: relative;
+    padding-left: 80px;
+}
+
+.quote-mark-new {
+    font-size: 120px;
+    color: #FFB6C1;
+    font-weight: normal;
+    line-height: 1;
+    font-family: Georgia, serif;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    opacity: 0.8;
+}
+
+.kalam-quote-new {
+    font-size: 1.8rem;
+    color: #002448;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-align: left;
+    font-family: cursive;
+    text-shadow: 1px 1px 2px gray;
+
+}
+
+.kalam-attribution {
+    padding-right: 20px;
+}
+
+.kalam-name-new {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2C3E50;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.kalam-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Faculty Section */
+
+
+
+.faculty-section {
+    background: #001f3f;
+    color: white;
+    padding: 45px 0 !important;
+    overflow-x: hidden;
+}
+
+.faculty-section .container-fluid {
+    padding: 0;
+}
+
+.faculty-section .section-title {
+    color: white;
+}
+
+.faculty-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.faculty-placeholder {
+    font-size: 1.1rem;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+
+.img-boxxxx img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    border: 1px solid rgb(217, 255, 0);
+
+}
+
+/* Faculty Card Wrapper */
+.faculty-card-wrapper {
+    margin-bottom: 0px;
+    padding: 0 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.faculty-section .row {
+    margin: 0;
+}
+
+/* Modern Faculty Card Base Styles */
+.faculty-card-top,
+.faculty-card-bottom,
+.faculty-card-single {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-card-top .container-fluid {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.faculty-card-top .row.g-0 {
+    height: 100%;
+    min-height: 500px;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.faculty-card-top .row.g-0 > [class*="col-"] {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-card-top:hover,
+.faculty-card-bottom:hover,
+.faculty-card-single:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Faculty Card Top (Physics) */
+.faculty-card-top {
+    padding: 0;
+}
+
+.faculty-card-top .faculty-content-left {
+    padding: 0;
+    background: transparent;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0;
+    flex: 1;
+}
+
+.faculty-card-top .faculty-quote-green {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #155724;
+    margin: 0;
+    padding: 40px 60px 35px 60px;
+    line-height: 1.4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background: white;
+    text-align: center;
+}
+
+.faculty-card-top .faculty-quote-green::before {
+    content: '❝';
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    font-size: 4.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-top .faculty-quote-green::after {
+    content: '❞';
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    font-size: 4.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-top .faculty-description-box {
+    background: #001f3f;
+    padding: 60px 40px 30px 40px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    min-height: 0;
+    height: 100%;
+    border-radius: 10px 25px 5px 5px;
+}
+
+.faculty-card-top .faculty-description-text {
+    color: #f8f9fa;
+    font-size: 1.09rem;
+    line-height: 1.9;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Faculty Card Bottom (Chemistry) */
+.faculty-card-bottom {
+    padding: 0;
+}
+
+.faculty-card-bottom .faculty-content-right {
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faculty-card-bottom .faculty-quote-green {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #155724;
+    margin: 0;
+    padding: 60px 80px 50px 80px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background: white;
+    text-align: center;
+}
+
+.faculty-card-bottom .faculty-quote-green::before {
+    content: '❝';
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-bottom .faculty-quote-green::after {
+    content: '❞';
+    position: absolute;
+    right: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-bottom .faculty-description-box {
+    background: #001f3f;
+    padding: 45px 40px;
+    padding-bottom: 45px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.faculty-card-bottom .faculty-description-text {
+    color: #f8f9fa;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+/* Faculty Card Single (Biology) */
+.faculty-card-single {
+    padding: 0;
+}
+
+.faculty-card-single::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+    z-index: 1;
+}
+
+.faculty-card-single .faculty-content-left {
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faculty-card-single .faculty-quote-green {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #155724;
+    margin: 0;
+    padding: 60px 80px 50px 80px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    background: white;
+    text-align: center;
+}
+
+.faculty-card-single .faculty-quote-green::before {
+    content: '❝';
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-single .faculty-quote-green::after {
+    content: '❞';
+    position: absolute;
+    right: 45px;
+    top: 50px;
+    font-size: 5.5rem;
+    color: #28a745;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.faculty-card-single .faculty-description-box {
+    background: #001f3f;
+    padding: 45px 40px;
+    padding-bottom: 45px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.faculty-card-single .faculty-description-text {
+    color: #f8f9fa;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+/* Faculty Image Wrapper */
+.faculty-image-wrapper {
+    position: relative;
+    padding: 0;
+    background: transparent;
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.faculty-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 66.67%;
+    background: white;
+    z-index: 0;
+}
+
+.faculty-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 33.33%;
+    background: #001f3f;
+    z-index: 0;
+}
+
+.faculty-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    max-height: calc(100% - 80px);
+    object-fit: contain;
+    object-position: center top;
+    display: block;
+    /* margin: 15px auto 0; */
+    /* padding: 0 20px; */
+    /* border-radius: 0; */
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); */
+    position: relative;
+    z-index: 1;
+    top: 15%;
+    /* transition: transform 0.3s ease; */
+}
+
+/* .faculty-image:hover {
+    transform: scale(1.01);
+} */
+
+.faculty-image-placeholder {
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0;
+    border: 3px dashed #cbd5e0;
+    background: #f7fafc;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.faculty-image-placeholder:hover {
+    border-color: #28a745;
+    background: #f0f9f4;
+}
+
+.faculty-image-placeholder i {
+    font-size: 4rem;
+    color: #a0aec0;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.faculty-image-placeholder:hover i {
+    color: #28a745;
+}
+
+.faculty-image-placeholder span {
+    font-size: 1.1rem;
+    color: #718096;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.faculty-image-placeholder:hover span {
+    color: #28a745;
+}
+
+/* Faculty Name Banner - Overlaid on Image */
+.faculty-name-banner {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.faculty-subject {
+    background: white;
+    color: #001f3f;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.faculty-name {
+    background: #28a745;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+/* For Chemistry card, name comes first */
+.faculty-name-banner-chemistry {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.faculty-name-banner-chemistry .faculty-name {
+    background: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0;
+    flex: 1 1 auto;
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.faculty-name-banner-chemistry .faculty-subject {
+    background: #001f3f;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Responsive adjustments for container padding */
+@media (max-width: 992px) {
+    .container-fluid.px-50 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid.px-50 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid.px-50 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Responsive adjustments for faculty cards */
+@media (max-width: 992px) {
+    .faculty-card-wrapper {
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+    
+    .faculty-card-top,
+    .faculty-card-bottom,
+    .faculty-card-single {
+        border-radius: 16px;
+        margin: 15px 0;
+    }
+    
+    .faculty-card-top .faculty-content-left,
+    .faculty-card-bottom .faculty-content-right,
+    .faculty-card-single .faculty-content-left {
+        padding: 40px 35px;
+        min-height: auto;
+    }
+    
+    .faculty-image-wrapper {
+        min-height: auto;
+        padding: 0;
+    }
+    
+    .faculty-image-wrapper::before {
+        height: 66.67% !important;
+    }
+    
+    .faculty-image-wrapper::after {
+        height: 33.33% !important;
+    }
+    
+    .faculty-image {
+        max-width: 350px !important;
+        max-height: calc(100% - 70px) !important;
+        margin: 12px auto 0 !important;
+        padding: 0 15px !important;
+    }
+    
+    .faculty-quote-green {
+        font-size: 1.7rem !important;
+        padding: 35px 50px 30px 50px !important;
+    }
+    
+    .faculty-quote-green::before {
+        font-size: 4rem !important;
+        left: 25px !important;
+        top: 30px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 4rem !important;
+        right: 25px !important;
+        top: 30px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 50px 35px 25px 35px !important;
+        border-radius: 0 !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 1rem !important;
+        line-height: 1.8 !important;
+    }
+    
+    .faculty-image-placeholder {
+        max-width: 300px;
+        height: 360px;
+        margin: 25px auto 0 !important;
+    }
+    
+    .faculty-image-placeholder i {
+        font-size: 3.5rem;
+    }
+    
+    .faculty-image-placeholder span {
+        font-size: 1rem;
+    }
+    
+    .faculty-subject {
+        font-size: 1rem !important;
+        padding: 12px 16px !important;
+    }
+    
+    .faculty-name {
+        font-size: 1rem !important;
+        padding: 12px 18px !important;
+    }
+    
+    .faculty-card-top .row.g-0 {
+        min-height: 450px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .faculty-card-wrapper {
+        margin-bottom: 25px;
+        padding: 0 5px;
+    }
+    
+    .faculty-card-top,
+    .faculty-card-bottom,
+    .faculty-card-single {
+        border-radius: 14px;
+        margin: 12px 0;
+    }
+    
+    .faculty-card-top .faculty-content-left,
+    .faculty-card-bottom .faculty-content-right,
+    .faculty-card-single .faculty-content-left {
+        padding: 0;
+    }
+    
+    .faculty-quote-green {
+        font-size: 1.4rem !important;
+        margin-bottom: 0 !important;
+        padding: 30px 40px 25px 40px !important;
+    }
+    
+    .faculty-quote-green::before {
+        font-size: 3.5rem !important;
+        left: 20px !important;
+        top: 25px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 3.5rem !important;
+        right: 20px !important;
+        top: 25px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 45px 30px 25px 30px !important;
+        border-radius: 0 !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 0.95rem !important;
+        line-height: 1.75 !important;
+    }
+    
+    .faculty-image-wrapper {
+        padding: 0;
+    }
+    
+    .faculty-image-wrapper::before {
+        height: 66.67% !important;
+    }
+    
+    .faculty-image-wrapper::after {
+        height: 33.33% !important;
+    }
+    
+    .faculty-image {
+        max-width: 300px !important;
+        max-height: calc(100% - 60px) !important;
+        margin: 10px auto 0 !important;
+        padding: 0 15px !important;
+    }
+    
+    .faculty-image-placeholder {
+        max-width: 280px;
+        height: 340px;
+    }
+    
+    .faculty-image-placeholder i {
+        font-size: 3rem;
+    }
+    
+    .faculty-image-placeholder span {
+        font-size: 0.95rem;
+    }
+    
+    .faculty-subject,
+    .faculty-name-banner-chemistry .faculty-subject {
+        font-size: 0.95rem !important;
+        padding: 10px 14px !important;
+    }
+    
+    .faculty-name,
+    .faculty-name-banner-chemistry .faculty-name {
+        font-size: 0.95rem !important;
+        padding: 10px 16px !important;
+    }
+    
+    .faculty-card-top .row.g-0 {
+        min-height: 400px !important;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .faculty-card-wrapper {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    .faculty-card-top,
+    .faculty-card-bottom,
+    .faculty-card-single {
+        border-radius: 12px;
+        margin: 10px 0;
+    }
+    
+    .faculty-card-top .faculty-content-left,
+    .faculty-card-bottom .faculty-content-right,
+    .faculty-card-single .faculty-content-left {
+        padding: 0;
+    }
+    
+    .faculty-quote-green {
+        font-size: 1.2rem !important;
+        margin-bottom: 0 !important;
+        padding: 25px 30px 20px 30px !important;
+    }
+    
+    .faculty-quote-green::before {
+        font-size: 3rem !important;
+        left: 15px !important;
+        top: 20px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 3rem !important;
+        right: 15px !important;
+        top: 20px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 40px 25px 20px 25px !important;
+        border-radius: 0 !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 0.9rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    .faculty-image-wrapper {
+        padding: 0;
+    }
+    
+    .faculty-image-wrapper::before {
+        height: 66.67% !important;
+    }
+    
+    .faculty-image-wrapper::after {
+        height: 33.33% !important;
+    }
+    
+    .faculty-image {
+        max-width: 250px !important;
+        max-height: calc(100% - 50px) !important;
+        margin: 8px auto 0 !important;
+        padding: 0 10px !important;
+    }
+    
+    .faculty-image-placeholder {
+        max-width: 240px;
+        height: 300px;
+    }
+    
+    .faculty-image-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    .faculty-image-placeholder span {
+        font-size: 0.9rem;
+    }
+    
+    .faculty-subject,
+    .faculty-name-banner-chemistry .faculty-subject {
+        font-size: 0.9rem !important;
+        padding: 8px 12px !important;
+    }
+    
+    .faculty-name,
+    .faculty-name-banner-chemistry .faculty-name {
+        font-size: 0.9rem !important;
+        padding: 8px 14px !important;
+    }
+    
+    .faculty-card-top .row.g-0 {
+        min-height: 350px !important;
+    }
+    
+    .faculty-card-top .row.g-0 > [class*="col-"] {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-quote-green {
+        font-size: 1.1rem !important;
+        padding: 20px 25px 18px 25px !important;
+    }
+    
+    .faculty-quote-green::before {
+        font-size: 2.5rem !important;
+        left: 12px !important;
+        top: 18px !important;
+    }
+    
+    .faculty-quote-green::after {
+        font-size: 2.5rem !important;
+        right: 12px !important;
+        top: 18px !important;
+    }
+    
+    .faculty-description-box {
+        padding: 35px 20px 18px 20px !important;
+    }
+    
+    .faculty-description-text {
+        font-size: 0.85rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .faculty-image {
+        max-width: 220px !important;
+        max-height: calc(100% - 45px) !important;
+        margin: 5px auto 0 !important;
+        padding: 0 8px !important;
+    }
+    
+    .faculty-subject,
+    .faculty-name-banner-chemistry .faculty-subject {
+        font-size: 0.85rem !important;
+        padding: 8px 10px !important;
+    }
+    
+    .faculty-name,
+    .faculty-name-banner-chemistry .faculty-name {
+        font-size: 0.85rem !important;
+        padding: 8px 12px !important;
+    }
+    
+    .faculty-card-top .row.g-0 {
+        min-height: 320px !important;
+    }
+}
+
+/* Page Content */
+.page-content {
+    min-height: 60vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f8 100%);
+}
+
+/* Facilities Section */
+.facilities-header {
+    background: linear-gradient(135deg, #195ca8 0%, #1e6bb8 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.facilities-header i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.facilities-header-title {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.facilities-section {
+    background: linear-gradient(135deg, #E8F4F8 0%, #f0f8fa 100%);
+    min-height: 60vh;
+    padding: 80px 0;
+}
+
+.facility-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.facility-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(25, 92, 168, 0.2);
+}
+
+.facility-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.facility-card:hover .facility-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.facility-icon.blue-icon {
+    background-color: #28a745;
+}
+
+.facility-icon.yellow-icon {
+    background-color: #28a745;
+}
+
+.facility-icon.green-icon {
+    background-color: #28a745;
+}
+
+.facility-title {
+    font-weight: 700;
+    color: #195ca8;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.facility-card:hover .facility-title {
+    color: #ff6b35;
+}
+
+.facility-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Get In Touch Section */
+.get-in-touch-section {
+    background: linear-gradient(135deg, #20B2AA 0%, #2dd4bf 100%);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-in-touch-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.get-in-touch-title {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.get-in-touch-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 15px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #195ca8 0%, #1e6bb8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(25, 92, 168, 0.3);
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(25, 92, 168, 0.4);
+}
+
+.contact-title {
+    font-weight: 700;
+    color: #195ca8;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.contact-card:hover .contact-title {
+    color: #ff6b35;
+}
+
+.contact-details {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    background: #001f3f;
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .about-orange {
+        padding: 70px 50px;
+    }
+    
+    .about-mission-content {
+        padding: 70px 50px;
+    }
+    
+    .kalam-message {
+        padding: 70px 50px;
+    }
+
+    .hero-slider{
+        height: max-content;
+    }
+
+    .hero-slider img{
+        object-fit: contain;
+    }
+    .hero-section{
+        height: max-content;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 13px;
+    }
+    
+    .header-link {
+        font-size: 15px;
+        padding: 5px 8px;
+    }
+    
+    /* Main Navbar */
+    .main-navbar {
+        height: auto;
+        padding: 12px 0;
+    }
+    
+    .logo-img {
+        height: 50px;
+    }
+    
+    .logo-text h5 {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text p {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 15px !important;
+        font-size: 0.95rem;
+    }
+    
+    /* About Section */
+    .about-orange,
+    .about-mission-content {
+        padding: 60px 40px;
+        background-color: #F7F7F7;
+    }
+    
+    .about-orange {
+        min-height: auto;
+    }
+    
+    .about-mission {
+        min-height: auto;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-text {
+        font-size: 1.1rem;
+    }
+    
+    /* Kalam Message */
+    .kalam-message {
+        padding: 60px 40px;
+        margin: 50px 0;
+    }
+    
+    .kalam-quote-new {
+        font-size: 1.6rem;
+    }
+    
+    .kalam-image {
+        max-width: 250px;
+    }
+    
+    /* Faculty Section */
+    .faculty-section {
+        padding: 60px 0 !important;
+    }
+    
+    /* Facilities */
+    .facilities-header-title {
+        font-size: 1.8rem;
+    }
+    
+    .facilities-section {
+        padding: 70px 0;
+    }
+    
+    .facility-card {
+        padding: 35px 25px;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-section {
+        padding: 80px 0;
+    }
+    
+    .get-in-touch-title {
+        font-size: 2.2rem;
+    }
+    
+    .contact-card {
+        padding: 45px 35px;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 500px;
+        clip-path: polygon(18% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: block;
+    }
+    
+    .f-text {
+        font-size: 17px;
+        margin-top: 80px;
+    }
+    
+    .icon {
+        margin-top: 80px;
+    }
+    
+    .girl-footer-container::after {
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+    
+    .header-nav .row {
+        text-align: center;
+    }
+    
+    .header-nav .col-md-6 {
+        margin-bottom: 5px;
+    }
+    
+    .header-links-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .header-link {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+    
+    .separator {
+        margin: 0 5px;
+    }
+    
+    #datetime {
+        font-size: 12px;
+    }
+    
+    /* Main Navbar */
+    .main-navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar-brand {
+        gap: 10px;
+    }
+    
+    .logo-img {
+        height: 45px;
+    }
+    
+    .logo-text h5 {
+        font-size: 1rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.9rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 12px !important;
+        font-size: 0.9rem;
+        margin: 0 3px;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        height: 400px;
+    }
+    
+    /* About Section */
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-orange,
+    .about-mission-content {
+        padding: 40px 30px;
+        min-height: auto;
+        background-color: white;
+    }
+    
+    .about-orange img {
+        margin-bottom: 20px;
+    }
+    
+    .about-mission-image {
+        min-height: 300px;
+        width: 100%;
+    }
+    
+    .about-orange img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
+    .guru-text {
+        font-family: cursive;
+    }
+    
+    /* Kalam Message */
+    .kalam-message {
+        padding: 50px 30px;
+        margin: 40px 0;
+    }
+    
+    .quote-container-new {
+        padding-left: 50px;
+    }
+    
+    .quote-mark-new {
+        font-size: 80px;
+        top: -10px;
+    }
+    
+    .kalam-quote-new {
+        font-size: 1.4rem;
+    }
+    
+    .kalam-image {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+    
+    /* Faculty Section */
+    .faculty-section {
+        padding: 50px 0 !important;
+    }
+    
+    /* Facilities */
+    .facilities-header {
+        padding: 15px 0;
+    }
+    
+    .facilities-header-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .facilities-header i {
+        font-size: 1.3rem;
+    }
+    
+    .facilities-section {
+        padding: 60px 0;
+    }
+    
+    .facility-card {
+        margin-bottom: 20px;
+        padding: 35px 25px;
+    }
+    
+    .facility-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .facility-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-section {
+        padding: 60px 0;
+    }
+    
+    .get-in-touch-title {
+        font-size: 2rem;
+    }
+    
+    .get-in-touch-subtitle {
+        font-size: 1rem;
+    }
+    
+    .contact-card {
+        margin-bottom: 20px;
+        padding: 40px 30px;
+    }
+    
+    .contact-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 2.2rem;
+    }
+    
+    .contact-title {
+        font-size: 1.3rem;
+    }
+    
+    .contact-details {
+        font-size: 1rem;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 450px;
+        clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: block;
+    }
+    
+    .f-text {
+        font-size: 16px;
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .icon {
+        margin-top: 60px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .girl-footer-container::after {
+        width: 400px;
+    }
+    
+    /* Popup Form */
+    .popup-content {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 11px;
+        padding: 6px 0;
+    }
+    
+    .header-nav .row {
+        text-align: center;
+    }
+    
+    .header-nav .col-md-6 {
+        margin-bottom: 5px;
+    }
+    
+    .header-links-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .header-link {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+    
+    #datetime {
+        font-size: 11px;
+    }
+    
+    /* Main Navbar */
+    .main-navbar {
+        padding: 8px 0;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text h5 {
+        font-size: 0.9rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 6px 10px !important;
+        font-size: 0.85rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        height: 300px;
+    }
+    
+    /* About Section */
+    .about-orange,
+    .about-mission-content {
+        padding: 30px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .about-orange img {
+        margin-bottom: 15px;
+    }
+    
+    .about-mission-image {
+        min-height: 250px;
+        width: 100%;
+    }
+    
+    .about-orange img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Kalam Message */
+    .kalam-message {
+        padding: 40px 20px;
+        margin: 30px 0;
+    }
+    
+    .quote-container-new {
+        padding-left: 40px;
+    }
+    
+    .quote-mark-new {
+        font-size: 60px;
+        top: -5px;
+    }
+    
+    .kalam-quote-new {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .kalam-name-new {
+        font-size: 1rem;
+    }
+    
+    .kalam-image {
+        max-width: 180px;
+        margin-top: 15px;
+    }
+    
+    /* Facilities */
+    .facilities-header {
+        padding: 12px 0;
+    }
+    
+    .facilities-header-title {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .facilities-header i {
+        font-size: 1.2rem;
+    }
+    
+    .facilities-section {
+        padding: 50px 0;
+    }
+    
+    .facility-card {
+        padding: 30px 20px;
+    }
+    
+    .facility-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .facility-title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .facility-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-section {
+        padding: 50px 0;
+    }
+    
+    .get-in-touch-title {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+    
+    .get-in-touch-subtitle {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+    
+    .contact-card {
+        padding: 35px 25px;
+    }
+    
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-details {
+        font-size: 0.95rem;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 400px;
+        clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: none;
+    }
+    
+    .f-text {
+        font-size: 14px;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+    
+    .icon {
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .icon > div {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .girl-footer-container::after {
+        width: 300px;
+    }
+    
+    /* Popup Form */
+    .popup-content {
+        width: 95%;
+        max-width: 320px;
+        padding: 20px 15px;
+    }
+    
+    .close-btn {
+        top: 5px;
+        right: 10px;
+        font-size: 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 0;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header Navigation */
+    .header-nav {
+        font-size: 10px;
+    }
+    
+    .header-link {
+        font-size: 11px;
+        padding: 2px 4px;
+    }
+    
+    /* Main Navbar */
+    .logo-img {
+        height: 35px;
+    }
+    
+    .logo-text h5 {
+        font-size: 0.8rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        height: 250px;
+    }
+    
+    /* About Section */
+    .about-orange,
+    .about-mission-content {
+        padding: 25px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+    }
+    
+    /* Kalam Message */
+    .kalam-message {
+        padding: 35px 15px;
+        margin: 25px 0;
+    }
+    
+    .quote-container-new {
+        padding-left: 35px;
+    }
+    
+    .quote-mark-new {
+        font-size: 50px;
+    }
+    
+    .kalam-quote-new {
+        font-size: 1.1rem;
+    }
+    
+    .kalam-image {
+        max-width: 150px;
+    }
+    
+    /* Facilities */
+    .facilities-header-title {
+        font-size: 1.1rem;
+    }
+    
+    .facility-card {
+        padding: 25px 15px;
+    }
+    
+    .facility-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .facility-title {
+        font-size: 1rem;
+    }
+    
+    .facility-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Get In Touch */
+    .get-in-touch-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 30px 20px;
+    }
+    
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    /* Footer Girl Section */
+    .g-t {
+        height: 350px;
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    .footer-photo {
+        display: none;
+    }
+    
+    .f-text {
+        font-size: 13px;
+        margin-top: 40px;
+        padding: 0 8px;
+    }
+    
+    .icon {
+        margin-top: 40px;
+        padding: 0 8px;
+    }
+    
+    .girl-footer-container::after {
+        width: 250px;
+    }
+    
+    /* Popup Form */
+    .popup-content {
+        width: 95%;
+        padding: 18px 12px;
+    }
+}
+
+
+
+
+/* 
+.form-container {
+    width: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #001f3f;
+}
+.success-message {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+}
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+} */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    width: 350px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+/* ===================================               Footer Girl Section              ============================== */
+
+
+
+.g-t{
+    clip-path: polygon(19% 0, 100% 0%, 100% 100%, 0% 100%);
+    height: 600px;
+    background-color: #001f3f;
+    color: white;
+
+}
+
+.girl-footer-container{
+    position: relative;
+    overflow: hidden;
+}
+.girl-footer-container::after{
+position: absolute;
+content: '';
+background: url(./images/footer-g-p.jpg);
+left: 0;
+top: -20%;
+height: 150%;
+width: 600px;
+background-position: top;
+background-repeat: no-repeat;
+background-size: cover;
+z-index: -1;
+}
+
+/* Footer girl section responsive columns */
+@media (max-width: 768px) {
+    .girl-footer-container .col-3 {
+        flex: 0 0 auto;
+        width: 0;
+        display: none;
+    }
+    
+    .girl-footer-container .col-9 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    .girl-footer-container .col-10 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .girl-footer-container .col-3 {
+        display: none;
+    }
+    
+    .girl-footer-container .col-9 {
+        width: 100%;
+    }
+    
+    .girl-footer-container .col-10 {
+        width: 100%;
+    }
+
+       /* .hero-section{
+            height: max-content;
+        }
+
+    .hero-slider{
+        height: 200px;
+    }
+
+    .hero-slide{
+        height: 100%;
+    }
+
+        .hero-image {
+        object-fit: fill;
+    } */
+
+    .hero-section{
+            height: max-content;
+        }
+
+        .hero-slider{
+        height: max-content;
+    }
+
+    .hero-slider img{
+        object-fit: contain;
+    }
+    .hero-section{
+        height: max-content;
+    }
+
+    .g-t{
+
+        height: 50%;
+        top: 20%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        padding: 0;
+    }
+
+    .para{
+        margin: 0;
+        /* padding: 0 30px; */
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+
+    .girl-footer-container{
+        overflow: visible;
+        margin-top: 80%;
+    }
+.girl-footer-container::after{
+position: absolute;
+content: '';
+background: url(./images/footer-g-p.jpg);
+left: 0;
+top: -40%;
+/* height: 150%;
+width: 600px; */
+/* width: 100%;
+height: 10%;
+object-fit: fill; */
+width: 100%;
+height: 50%;
+background-size: 100%;
+
+}
+
+.neon-btn{
+    width: 90%;
+}
+
+}
+
+.f-text{
+    font-size: 19px;
+    text-align: justify;
+    font-family: cursive;
+    text-shadow: #ffffff;
+    margin-top: 100px;
+}
+.icon{
+ margin-top: 100px;
+}
+
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+/* ===================                   Chairmain section with outher 2 dropdown page style here               ================== */
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+/* ===================================================================================================================================== */
+
+
+.chairman-section {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 90px 5%;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.chairman-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 70px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.chairman-image img {
+    width: 1500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid rgba(255, 255, 255, 0.247);
+    box-shadow: #001f3f;
+}
+
+/* Content Styling */
+.chairman-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.chairman-content h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.chairman-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #eaeaea;
+}
+
+.chairman-sign {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #f1c40f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chairman-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chairman-image img {
+        width: 220px;
+        height: 280px;
+    }
+
+      .hero-section{
+            height: max-content;
+        }
+
+        /* .hero-slider{
+        height: 300px;
+    } */
+
+    .hero-slide{
+        height: 100%;
+    }
+
+        .hero-image {
+        object-fit: fill;
+    }
+
+    .neon-btn{
+    width: 90%;
+}
+
+}
+
+
+
+
+/*  =================================               Drop down style here           ===========================*/
+
+/* Parent positioning */
+.dropdown-custom {
+    position: relative;
+}
+
+/* Submenu hidden by default */
+.dropdown-custom .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 999;
+}
+
+/* Show submenu on hover */
+.dropdown-custom:hover .submenu {
+    display: block;
+}
+
+/* Submenu links */
+.submenu a {
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.submenu a:hover {
+    background-color: #002b6c;
+    color: hsl(0, 0%, 100%);
+}
+
+/* Icon rotate on hover */
+.dropdown-custom:hover i {
+    transform: rotate(90deg);
+}
+
+.nav-link i {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+/* Responsive dropdown menu */
+@media (max-width: 991px) {
+    .dropdown-custom .submenu {
+        position: static;
+        display: block;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 5px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .dropdown-custom .submenu a {
+        padding: 8px 15px;
+        color: white;
+        border-left: 3px solid transparent;
+    }
+    
+    .dropdown-custom .submenu a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-left-color: white;
+        color: white;
+    }
+    
+    .dropdown-custom:hover .submenu {
+        display: block;
+    }
+}

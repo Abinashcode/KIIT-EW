@@ -1,0 +1,17 @@
+IMPORTANT: To make the background watermark visible:
+
+1. Add your background image file to this folder (assets/)
+   - Name it: facility-bg.jpg (or update the CSS filename)
+   - Supported formats: .jpg, .png, .svg
+
+2. The CSS is looking for: assets/facility-bg.jpg
+
+3. If the image file doesn't exist, the background won't show!
+
+4. After adding your image, refresh the page to see the watermark.
+
+5. To adjust visibility, edit styles.css and change:
+   - opacity: 0.35 (higher = more visible, lower = more subtle)
+   - blur(5px) (higher = more blur, lower = sharper)
+   - background-size: 400px (larger = bigger pattern, smaller = more repeats)
+

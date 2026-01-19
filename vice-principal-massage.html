@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIIT Higher Secondary School</title>
+    <link rel="icon" type="image/x-icon" href="./images/KIIT_logo.png">
+     <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+      <!-- Header Navigation -->
+
+    <header class="header-nav">
+        <div class="container-fluid">
+            <div class="row align-items-center py-2">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="far fa-clock me-2"></i>
+                        <span id="datetime"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="header-links-right">
+                        <a href="index.html" class="header-link"><i class="fas fa-home"></i></a>
+                        <span class="separator">|</span>
+                        <a href="https://www.kiitsciencecollege.org/" class="header-link">KIIT Higher Secondary School</a>
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="#" class="header-link">Sitemap</a> -->
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="inquiry.html" class="btn btn-enquiry">Enquiry</a> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main Navigation Bar -->
+
+
+    <nav class="main-navbar navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/KIIT_logo.png" alt="KIIT Higher Secondary School Logo" class="logo-img">
+                <div class="logo-text" >
+                    <h5  class="mb-0 "><i>
+                        KIIT  ENTRANCE  WINGS
+                    </i></h5>
+                    <p class="mb-0 logo-text">Momentum of Learning.....</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link" href="#">
+                            About <i class="fas fa-chevron-down"></i>
+                        </a>
+
+                        <div class="submenu">
+                          <a href="chairman-massage.html">Chairman’s Message</a>
+							  <a href="chief-advisor-massage.html">Chief Advisor’s Message</a>
+                            <a href="principal-massage.html">Principal’s  Message</a>
+							 <a href="vice-principal-massage.html">Vice-Principal’s  Message</a>
+							 <a href="entrance-coordinator.html">Entrance Co-ordinator’s Message</a>
+							 <a href="hod-massage.html">HOD’s Message</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Results</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="#">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openForm()">Admission Inquiry</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Principal massage section -->
+
+<section class="chairman-section">
+    <div class="chairman-container">
+
+        <!-- Principal Photo -->
+        <div class="chairman-image">
+            <img src="./images/vice-principal.jpg"" alt="Entrance Co-ordinator">
+        </div>
+
+        <!-- Chairman Message -->
+        <div class="chairman-content">
+            <h2>Vice-Principal’s Message</h2>
+            <h4>Dr. Rudra Mohan Nanda</h4>
+            <p align="justify">
+          Success in NEET and JEE isn't just about the reagents (books and coaching); it’s about the activation energy you bring every single day. Remember, a diamond is just a piece of charcoal that handled pressure exceptionally well. Be the catalyst in your own reaction to success.</p>
+           
+			<p><strong><i class="fas fa-quote-left text-deep-pink icon-medium margin-15px-bottom"></i> ​Don't just react to the paper—control the equilibrium of your future. <i class="fas fa-quote-right text-deep-pink icon-medium margin-15px-bottom"></i></strong>
+</p>
+	
+            <span class="chairman-sign">Vice-Principal</span>
+            <p class="j">KIIT Entrance Wings</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+  <!-- Footer -->
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2026 KIIT Higher Secondary School, Bhubaneswar, Odisha. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- Bootstrap 5 JS Bundle -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="typying-effect.js"></script>
+
+
+
+
+
+<!--==================== Pop up Form Script  ======================== -->
+    <script>
+function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIIT Higher Secondary School</title>
+    <link rel="icon" type="image/x-icon" href="./images/KIIT_logo.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <!-- Header Navigation -->
+
+    <header class="header-nav">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center py-2">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <i class="far fa-clock me-2"></i>
+                        <span id="datetime"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="header-links-right">
+                        <a href="index.html" class="header-link"><i class="fas fa-home"></i></a>
+                        <span class="separator">|</span>
+                        <a href="https://www.kiitsciencecollege.org/" class="header-link">KIIT Higher Secondary School</a>
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="#" class="header-link">Sitemap</a> -->
+                        <!-- <span class="separator">|</span> -->
+                        <!-- <a href="inquiry.html" class="btn btn-enquiry">Enquiry</a> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main Navigation Bar -->
+
+
+    <nav class="main-navbar navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/KIIT_logo.png" alt="KIIT Higher Secondary School" class="logo-img">
+                <div class="logo-text" >
+                    <h5  class="mb-0 "><i>
+                        KIIT  ENTRANCE  WINGS
+                    </i></h5>
+                    <p class="mb-0 logo-text">Momentum of Learning.....</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link" href="#">
+                            About <i class="fas fa-chevron-down"></i>
+                        </a>
+
+                        <div class="submenu">
+                            <a href="chairman-massage.html">Chairman’s Message</a>
+							  <a href="chief-advisor-massage.html">Chief Advisor’s Message</a>
+                            <a href="principal-massage.html">Principal’s  Message</a>
+							 <a href="vice-principal-massage.html">Vice-Principal’s  Message</a>
+							 <a href="entrance-coordinator.html">Entrance Co-ordinator’s Message</a>
+							 <a href="hod-massage.html">HOD’s Message</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Results</a>
+                    </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="#">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="openForm()">Admission Inquiry</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Hero Section with Scrolling Images -->
+
+
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide">
+                <img src="./images/aurobinda-banner.jpg" alt="KIIT Higher Secondary School" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-1"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="./images/sarthak-banner.jpg" alt="KIIT Higher Secondary School" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-2"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="./images/chinmay-banner.jpg" alt="KIIT Higher Secondary School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+
+
+            <!-- Duplicate slides for seamless loop -->
+
+
+            <div class="hero-slide">
+                <img src="./images/somesh-banner.jpg" alt="KIIT Higher Secondary School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-1"></div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="./images/maryada-banner.jpg" alt="KIIT Higher Secondary School " class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-2"></div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="./images/sarthak-banner.jpg" alt="KIIT Higher Secondary School" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="./images/madhusmita-banner.jpg" alt="KIIT Higher Secondary School" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+
+
+            <div class="hero-slide">
+                <img src="./images/banner-subhalami.jpg" alt="KIIT Higher Secondary School" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hero-placeholder hero-placeholder-3"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Botten-pdf -->
+
+<div class="btn-pdf">
+    <a href="./images/crash-course-leaflet-2026.pdf" target="_blank" class="neon-btn">
+  <!-- <span></span>
+  <span></span>
+  <span></span>
+  <span></span> -->
+  Crash Course Leaflet-2026
+</a>
+</div>
+
+
+    <!-- About Section -->
+
+    <section id="about" class="about-section py-3">
+
+
+        <!-- First About Content - Image Left, Text Right with Orange Background -->
+        <div class="container-fluid px-50">
+            <div class="row align-items-center justify-content-between g-0 about-orange">
+                <div class="col-md-4">
+                    <img src="./images/guru-image.png" alt="Guru Shishya Parampara" class="">
+                </div>
+                <div class="col-md-7">
+                    <h4 class="section-title mb-4 text-dark" id="typingHeading">KIIT Higher Secondary School: Entrance Wings</h4>
+                    <p class=" about-text text-dark" >
+                 
+                        Many students aspire to become doctors or engineers, with the first sparks of ambition appearing in their early school days. In India, this ambition manifests as the goal to clear the highly competitive NEET and JEE examinations—a step toward lifelong success.
+
+Success in these exams serves as a gateway to prominent medical and engineering colleges, universities, and IITs, both in India and abroad.
+
+KIIT Higher Secondary School's Entrance Wings is a distinguished organization dedicated to making your child’s goals a reality. Through technical coaching, well-designed test series, an intellectual environment, comprehensive study materials, and versatile faculty members, we create the momentum students need to achieve their breakthrough and reach the pinnacle of success.
+
+Completing two decades of existence, our organization believes in dedication and diligence. This determination drives both us and our budding talents. We trust in high-level education and have engaged IITians to help students master complex concepts, enabling them to decode examination questions effectively and creatively.
+
+We heartily invite all students to join us, enjoy the journey of education, and build your career with the right choice, at the right time, in the right direction.
+
+                      
+                    </p>
+                    <!-- <a href="#" class="read-more-link text-white">READ MORE</a> -->
+                </div>
+            </div>
+
+
+
+            <!-- Second About Content - Image Right, Text Left -->
+
+
+            <div class="row align-items-center g-0 about-mission">
+                <div class="col-md-6 order-md-2">
+                    <img src="./images/guru-2.png" alt="About KIIT" class="img-fluid about-mission-image">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="about-mission-content">
+                        <h2 class="section-title mb-4"></h2>
+                        <p class="about-text">
+                     
+                             This organisation completing its two decade existence believes in dedication and elegance, which give the determination to us as well as to our budding talents. Besides, we trust on high level education, so accomodated (IITians) to coin the concept with students, which they decode in examination and answer the questions managing integral times to their imagination. Heartily we invite all students join with us and enjoy the education and build your carrier adjacent to right choice, right time and right direction...!!
+                       
+                        </p>
+                        <!-- <a href="#" class="read-more-link">READ MORE</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- APJ Abdul Kalam Motivation Message -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="kalam-message">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="quote-container-new">
+                                    <span class="quote-mark-new">"</span>
+                                    <p class="kalam-quote-new">
+Education brings creativity, thinking, and knowledge, leading to greatness. Excellence is a continuous process.
+                                    </p>
+                                </div>
+                                <div class="kalam-attribution text-end mt-3">
+                                    <p class="kalam-name-new mb-0" style="font-family: cursive; color: #002448; text-shadow: 1px 1px 2px gray;" >- Dr. APJ Abdul Kalam</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <img src="./images/dr-apj-kalam.jpg" alt="Dr. APJ Abdul Kalam" class="kalam-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Faculty Section -->
+
+    <section class="faculty-section py-5">
+        <div class="container-fluid px-0">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Faculty</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center faculty-intro">
+                            Our dedicated team of experienced educators is committed to nurturing and inspiring our students.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Faculty Member Cards Via Image and Text -->
+
+         <!-- Faculty Member 1: Physics - Mr. Basudev Pathi -->
+            <!-- <div class="img-boxxxx mb-4">
+                <img src="./images/f-img1.jpg" alt="Faculty Background" class="img-fluid">
+            </div> -->
+
+            <!-- 2nd Image Teacher  -->
+
+               <!-- <div class="img-boxxxx mb-4">
+                <img src="./images/f-img-2.jpg" alt="Faculty Background" class="img-fluid">
+            </div> -->
+
+            <!-- End of Faculty Member 2 Image -->
+
+
+
+             <!-- 3rd Image Teacher  -->
+<!--
+               <div class="img-boxxxx mb-4">
+                <img src="./images/f-img-3.jpg" alt="Faculty Background" class="img-fluid">
+            </div> -->
+
+            <!-- End of Faculty Member 3 Image -->
+
+
+            <!-- Facciulty Member  section via code -->
+
+            <div class="d-flex flex-column align-items-center justify-content-center" style="width: 100cw; overflow-x: hidden;">
+            
+<!-- 1st Teacher -->
+
+
+            <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-7 col-md-12 order-lg-1 order-2">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                           A person without any aspiration is like a boat without a rudder
+                                      </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                              To achieve our goal, we must have ambition. Ambition is a strong desire to achieve something in life. Dedication, devotion, diligence, and accumulation of tasks, alongside positive thinking, determination, and counteracting dilemmas, have been the important factors of success for every determined person.<br><br>
+
+After everything, we are all students. So learn, grow, and architect the world. We should believe in:
+"<em>Momentum of talent coined the concept.</em>" </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 order-lg-2 order-1">
+                                    <div class="faculty-image-wrapper">
+                                            <img src="./images/teacher/basudev-n.png" alt="" class="faculty-image">
+                                            <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Physics</div>
+                                            <div class="faculty-name">Mr. Basudev Pathi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- 2nd faculty member -->
+            <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-5 col-md-12 order-lg-1 order-1">
+                                    <div class="faculty-image-wrapper">
+                                        <img src="./images/teacher/deepak-n.png" alt="" class="faculty-image">
+                                        <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Biology</div>
+                                            <div class="faculty-name">Mr. Deepak Panda</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 order-lg-2 order-2">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                          &nbsp Success doesn't find you. You have to go out and get it &nbsp
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                               Don't fear a change in the exam pattern or a difficult question paper. Evolution doesn't favor the strongest; it favors the most adaptable. Survival in the merit list belongs to those who can pivot their strategy under pressure.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- 3rd Faculty Member -->
+
+     <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-7 col-md-12 order-lg-1 order-2">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                            ​Your routine is your result. Master the process, and the rank will follow
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                                    Cracking entrance exams isn't about being a genius; it is about the consistency to show up every day and the resilience to learn from every mistake. Like a Rate Determining Step, your daily discipline is what ultimately controls the speed of your success.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 order-lg-2 order-1">
+                                    <div class="faculty-image-wrapper">
+                                            <img src="./images/teacher/ananta-n.png" alt="" class="faculty-image">
+                                            <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Chemistry</div>
+                                            <div class="faculty-name">Mr. Ananta Ku. Behera</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+<!-- 4th faculty member -->
+            <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-5 col-md-12 order-lg-1 order-1">
+                                    <div class="faculty-image-wrapper">
+                                        <img src="./images/teacher/smurti-n.png" alt="" class="faculty-image">
+                                        <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Chemistry</div>
+                                            <div class="faculty-name">Mr. Smrutiranjan Panda</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 order-lg-2 order-2">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                           ​The mind is everything. What you think, you become
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                                NEET and JEE Chemistry often feels challenging, but with the right guidance it becomes logical and scoring. We focus on simplifying complex topics, strengthening NCERT fundamentals, and training students to think analytically so they can tackle even the toughest questions with ease.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+<!-- 5th Faculty Member -->
+
+     <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-7 col-md-12 order-lg-1 order-2">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                            Your potential is a function with no upper bound
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                               My ambition is tied to yours. When you succeed, I succeed. I’m here to break down the walls of 'intimidating' math and help you use it to reach your biggest goals. Let’s work hard, think fast, and bridge the gap between where you are and where you want to be.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 order-lg-2 order-1">
+                                    <div class="faculty-image-wrapper">
+                                            <img src="./images/teacher/tapas.png" alt="" class="faculty-image">
+                                            <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Mathematics</div>
+                                            <div class="faculty-name">Mr. Tapas Kumar Sahu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- 6th faculty member -->
+            <div class="row">
+                <div class="faculty-card-wrapper">
+                    <div class="faculty-card-top">
+                        <div class="container-fluid px-0">
+                            <div class="row g-0 align-items-stretch">
+                                <div class="col-lg-5 col-md-12 order-lg-1 order-1">
+                                    <div class="faculty-image-wrapper">
+                                        <img src="./images/teacher/jan-majaya-n-.png" alt="" class="faculty-image">
+                                        <div class="faculty-name-banner">
+                                            <div class="faculty-subject">Physics</div>
+                                            <div class="faculty-name">Mr. Janmajay Meher</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 order-lg-2 order-2">
+                                    <div class="faculty-content-left">
+                                        <div class="faculty-quote-green">
+                                           Curiosity is the thread. Physics is the map
+                                        </div>
+                                        <div class="faculty-description-box">
+                                            <p class="faculty-description-text">
+                                               Physics is the thread that connects a child’s toy to the stars. It is the map we use to find our way through the universe.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+
+
+    <!-- Facilities Header -->
+    <div class="facilities-header">
+        <div class="container-fluid">
+            <div class="row g-0">
+                <div class="col-12 d-flex align-items-center px-4 py-4">
+                    <i class="fas fa-home me-3"></i>
+                    <h2 class="mb-0 facilities-header-title">FACILITIES</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facilities Section -->
+
+    <section class="facilities-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Expert Teachers -->
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="facility-title">Expert Teachers</h5>
+                        <p class="facility-description">Best & experienced faculty with proven track records</p>
+                    </div>
+                </div>
+
+                <!-- Academic Excellence -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="facility-title">Academic Excellence</h5>
+                        <p class="facility-description">Proven track record of outstanding results</p>
+                    </div>
+                </div>
+
+                <!-- Test & Assignment -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon yellow-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5 class="facility-title">Test & Assignment</h5>
+                        <p class="facility-description">Regular tests and assignments for continuous evaluation</p>
+                    </div>
+                </div>
+
+                <!-- Study Material -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h5 class="facility-title">Study Material</h5>
+                        <p class="facility-description">Well designed comprehensive study resources</p>
+                    </div>
+                </div>
+
+                <!-- Clear Guidance -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="facility-title">Clear Guidance</h5>
+                        <p class="facility-description">Individual guidance and personalized care</p>
+                    </div>
+                </div>
+
+                <!-- Library -->
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5 class="facility-title">Library</h5>
+                        <p class="facility-description">Well-stocked library with extensive resources</p>
+                    </div>
+                </div>
+
+                <!-- Lab -->
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon blue-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h5 class="facility-title">Lab</h5>
+                        <p class="facility-description">State-of-the-art computer and science labs</p>
+                    </div>
+                </div>
+
+                <!-- Hygienic food -->
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="facility-card">
+                        <div class="facility-icon green-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5 class="facility-title">Hygienic food</h5>
+                        <p class="facility-description">food that is safe to eat and free from contaminants that can cause illness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+
+    <section class="get-in-touch-section py-5">
+        <div class="container">
+            <h2 class="get-in-touch-title text-center mb-3">GET IN TOUCH</h2>
+            <p class="get-in-touch-subtitle text-center mb-5">
+                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            </p>
+            <div class="row g-4 justify-content-center">
+
+
+                <!-- Address Card -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="contact-title">Address</h5>
+                        <p class="contact-details">
+                            Campus- VII, KIIT, Patia<br>
+                            Bhubaneswar, Odisha
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5 class="contact-title">Phone</h5>
+                        <p class="contact-details">+91-73770-88233</p>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="contact-title">Email</h5>
+                        <p class="contact-details">kiitsciencecollege@yahoo.co.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+<!-- Footer girl section -->
+
+<section class="girl-footer-container">
+    <div class="row">
+        <div class="col-md-3 footer-photo">
+            <!-- <img src="./images/footer-g-p.jpg" class="img-fluid" alt="Girl photo"> -->
+        </div>
+        <div class="col-md-9 row g-t justify-content-end align-items-start">
+           <div class="col-md-10 mt-5 py-md-5 py-0">
+             <p class="para">
+               Believe in yourself and keep moving forward. Every small step you take today brings you closer to your goals. Don’t stop when things get hard—those moments are shaping you into something stronger. Stay focused, stay consistent, and trust the process. 🌱💪
+
+               Challenges are not signs to stop; they are lessons to grow stronger and wiser. Stay patient, stay disciplined, and keep faith in your journey. Your hard work will pay off sooner than you think.
+            </p>
+
+            <div class="icon d-flex justify-content-lg-between justify-content-center my-5">
+           <div class="phone d-flex flex-column align-items-center">
+             <i class="fa-solid fa-phone"></i>
+             <p>Ph No : 73770-88233</p>
+           </div>
+            <div class="mail d-flex flex-column align-items-center">
+                <i class="fa-regular fa-envelope"></i>
+                <p>G-mail : kiit@gmail.com</p>
+            </div>
+            <div class="location d-flex flex-column align-items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>
+                    Patia , Bhubaneswar , Odisha
+                </p>
+            </div>
+           </div>
+
+           </div>
+        </div>
+    </div>
+</section>
+
+<br>
+    <!-- Footer -->
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2026 KIIT Higher Secondary School, Bhubaneswar, Odisha. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="typying-effect.js"></script>
+
+
+
+
+
+<!--==================== Pop up Form Script  ======================== -->
+    <script>
+function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
+</script>
+
+
+<!--========================        Pop up Form HTML         ========================-->
+
+
+    <div class="popup" id="popupForm">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closeForm()">×</span>
+
+        <h2>Admission Inquiry</h2>
+
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>E-mail</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Phone No</label>
+            <input type="tel" placeholder="Enter phone number">
+
+            <label>Subject</label>
+            <input type="text" placeholder="Enter subject">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
